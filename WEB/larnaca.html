@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Kypr 16.–19. 1. 2025 – Inspirativní cestopis</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .day {
+            margin-bottom: 50px;
+            border-left: 5px solid #667eea;
+            padding-left: 20px;
+        }
+        
+        .day h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        .day-subtitle {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th {
+            background: #f0f0f0;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .time {
+            font-weight: 600;
+            color: #667eea;
+            min-width: 80px;
+        }
+        
+        .place {
+            font-weight: 600;
+            color: #764ba2;
+        }
+        
+        .meal {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .meal-title {
+            font-weight: 600;
+            color: #856404;
+        }
+        
+        .restaurant {
+            margin-left: 10px;
+            font-size: 0.95em;
+            color: #333;
+        }
+        
+        .optional {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+            margin: 15px 0;
+        }
+        
+        .optional-title {
+            font-weight: 600;
+            color: #0d47a1;
+        }
+        
+        .accommodation {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .accommodation-title {
+            font-weight: 600;
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+        
+        .accommodation-details {
+            font-size: 0.9em;
+            color: #333;
+            margin-left: 10px;
+        }
+        
+        .accommodation-details div {
+            margin: 5px 0;
+        }
+        
+        .tips {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .tips h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .tips ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .tips li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .tips li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+        
+        .emoji {
+            margin-right: 5px;
+        }
+        
+        .rating {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+            
+            td, th {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>KYPR 2025 – Larnaca, Troodos, Lefkara</h1>
+        <p>16. – 19. ledna 2025 &nbsp;|&nbsp; 2 celé dny + 2 půldny &nbsp;|&nbsp;Autentická gastronomie &amp; historie</p>
+    </div>
+    <div class="content">
+        <!-- 16.1. Čtvrtek -->
+        <div class="day">
+            <h2>Čtvrtek 16. ledna – Přílet & Večer v Larnace</h2>
+            <div class="day-subtitle">Přílet 22:20 • Centrum Larnaky • Seznamovací večeře</div>
+            <table>
+                <tr>
+                    <th class="time">Čas</th>
+                    <th>Místo</th>
+                    <th>Aktivita</th>
+                </tr>
+                <tr>
+                    <td class="time">22:20</td>
+                    <td class="place">Larnaca Airport</td>
+                    <td>Přílet • Přesun do centra • Ubytování</td>
+                </tr>
+                <tr>
+                    <td class="time">23:00</td>
+                    <td class="place">Finikoudes</td>
+                    <td>Procházka u moře • Večeře <span class="restaurant">Grada Tavern, Takis Georgiou Kafeneio</span></td>
+                </tr>
+                <tr>
+                    <td class="time">Pozdě</td>
+                    <td class="place">Centrum/Promenáda</td>
+                    <td>Noční atmosféra promenády • Chrám Agios Lazaros</td>
+                </tr>
+            </table>
+        </div>
+        <!-- 17.1. Pátek -->
+        <div class="day">
+            <h2>Pátek 17. ledna – Larnaca památky & meze</h2>
+            <div class="day-subtitle">Historie • Trhy • Byzantský chrám • Gastro zážitky</div>
+            <table>
+                <tr>
+                    <th class="time">Čas</th>
+                    <th>Místo</th>
+                    <th>Aktivita</th>
+                </tr>
+                <tr>
+                    <td class="time">Ráno</td>
+                    <td class="place">Enigma/Mingle Cafe</td>
+                    <td>Brunch • Káva</td>
+                </tr>
+                <tr>
+                    <td class="time">8:00</td>
+                    <td class="place">Agios Lazaros</td>
+                    <td>Návštěva chrámu • Byzantské památky</td>
+                </tr>
+                <tr>
+                    <td class="time">10:30</td>
+                    <td class="place">Finikoudes</td>
+                    <td>Trh • Promenáda • Káva u moře</td>
+                </tr>
+                <tr>
+                    <td class="time">11:30</td>
+                    <td class="place">Larnaca Castle / Aqueduct</td>
+                    <td>Historie • Fotografie</td>
+                </tr>
+                <tr>
+                    <td class="time">12:30</td>
+                    <td class="place">Stou Roushia/To Kazani Tavern</td>
+                    <td class="meal"><span class="meal-title">Oběd: Meze & cypriotská kuchyně</span></td>
+                </tr>
+                <tr>
+                    <td class="time">14:30</td>
+                    <td class="place">Salt Lake & Hala Sultan Tekke</td>
+                    <td>Výlet autem • Plameňáci • Mešita</td>
+                </tr>
+                <tr>
+                    <td class="time">19:00</td>
+                    <td class="place">Cambanellas/Ocean Basket</td>
+                    <td class="meal"><span class="meal-title">Večeře: steak, ryby, mořské plody</span></td>
+                </tr>
+            </table>
+        </div>
+        <!-- 18.1. Sobota -->
+        <div class="day">
+            <h2>Sobota 18. ledna – Troodos, Omodos, Lefkara</h2>
+            <div class="day-subtitle">Hory • Klášter Kykkos • Krajkářské vesnice • Degustace</div>
+            <table>
+                <tr>
+                    <th class="time">Čas</th>
+                    <th>Místo</th>
+                    <th>Aktivita</th>
+                </tr>
+                <tr>
+                    <td class="time">Ráno</td>
+                    <td class="place">Troodos</td>
+                    <td>Výjezd autem • Krátká túra • Kykkos</td>
+                </tr>
+                <tr>
+                    <td class="time">10:00</td>
+                    <td class="place">Omodos</td>
+                    <td>Ochutnávka vín • Lokální sýry</td>
+                </tr>
+                <tr>
+                    <td class="time">11:30</td>
+                    <td class="place">Lefkara</td>
+                    <td>Krajky • Kavárna Red Door • Oběd v taverně</td>
+                </tr>
+                <tr>
+                    <td class="time">15:00</td>
+                    <td class="place">Kalopanayiotis</td>
+                    <td>Termální lázně • Relax</td>
+                </tr>
+                <tr>
+                    <td class="time">19:00</td>
+                    <td class="place">Eu Kouzin</td>
+                    <td class="meal"><span class="meal-title">Večeře: moderní cypriotská kuchyně, dezerty</span></td>
+                </tr>
+            </table>
+        </div>
+        <!-- 19.1. Neděle -->
+        <div class="day">
+            <h2>Neděle 19. ledna – Larnaca dopoledne & odlet</h2>
+            <div class="day-subtitle">Snídaně • Procházka • Nákup suvenýrů • Přesun na letiště</div>
+            <table>
+                <tr>
+                    <th class="time">Čas</th>
+                    <th>Místo</th>
+                    <th>Aktivita</th>
+                </tr>
+                <tr>
+                    <td class="time">Ráno</td>
+                    <td class="place">Cafeteria Nero, Enigma</td>
+                    <td>Snídaně • Poslední káva</td>
+                </tr>
+                <tr>
+                    <td class="time">Dopoledne</td>
+                    <td class="place">Finikoudes</td>
+                    <td>Procházka • Trh • Nákup sladkostí</td>
+                </tr>
+                <tr>
+                    <td class="time">13:00</td>
+                    <td class="place">Letiště</td>
+                    <td>Přesun a odlet 15:20</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- TOP RESTAURACE -->
+        <div class="tips">
+            <h3>Doporučené restaurace & zážitky</h3>
+            <ul>
+                <li>Stou Roushia (tradiční meze, atmosféra)</li>
+                <li>Enigma Restaurant (moderní, brunch, espresso)</li>
+                <li>To Kazani Tavern (domácí, autentická jídla)</li>
+                <li>Ocean Basket (mořské plody, ryby)</li>
+                <li>Cambanellas Steak (steaky)</li>
+                <li>Eu Kouzin (dezerty, domácí speciality)</li>
+            </ul>
+        </div>
+        <div class="tips">
+            <h3>Praktické tipy</h3>
+            <ul>
+                <li>Vrstevnaté oblečení na hory • možnost sněhu</li>
+                <li>Auto nutné do hor • omezená doprava</li>
+                <li>Zimní cypriotské speciality: loukaniko, halloumi, kleftiko, meze, baklava</li>
+                <li>Restaurace otevřené celoročně, zejména v městě</li>
+                <li>Možnost povinné rezervace degustace v Omodos</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Rozcestník cestopisů &nbsp;|&nbsp; <a href="rozcestnik.html">Cestovatelský rozcestník</a></p>
+        <p>© 2025 | Inspirováno Kalábrie & Kypr &nbsp;|&nbsp; Skupina 36–37 let</p>
+    </div>
+</div>
+</body>
+</html>
