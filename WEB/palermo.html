@@ -1,273 +1,255 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <title>Itinerář Palermo 22.–25. ledna 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-    }
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 15px 15px 0 0;
-      margin-bottom: 40px;
-    }
-    .header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    .header p {
-      font-size: 1.1em;
-      opacity: 0.9;
-    }
-    .content {
-      padding: 0 20px;
-    }
-    .day {
-      margin-bottom: 50px;
-      border-left: 5px solid #667eea;
-      padding-left: 20px;
-    }
-    .day h2 {
-      color: #667eea;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-    .day-subtitle {
-      font-style: italic;
-      color: #666;
-      font-size: 0.95em;
-      margin-bottom: 15px;
-    }
-    ul.activities {
-      list-style: none;
-      margin-left: 0;
-      margin-top: 0;
-      padding-left: 0;
-    }
-    ul.activities li {
-      padding-left: 25px;
-      position: relative;
-      margin-bottom: 12px;
-    }
-    ul.activities li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #667eea;
-      font-weight: bold;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #e0e0e0;
-      text-align: left;
-    }
-    th {
-      background: #f0f0f0;
-      color: #667eea;
-      font-weight: 600;
-      border-bottom: 2px solid #667eea;
-    }
-    .time {
-      font-weight: 600;
-      color: #667eea;
-      min-width: 80px;
-    }
-    .place {
-      font-weight: 600;
-      color: #764ba2;
-    }
-    .meal {
-      background: #fff3cd;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 10px 0;
-      border-left: 4px solid #ffc107;
-    }
-    .meal-title {
-      font-weight: 600;
-      color: #856404;
-      margin-bottom: 6px;
-    }
-    .restaurant {
-      margin-left: 10px;
-      font-size: 0.95em;
-      color: #333;
-    }
-    .tips {
-      background: #f0f9ff;
-      border-left: 4px solid #2196f3;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 30px;
-    }
-    .tips h3 {
-      color: #667eea;
-      margin-bottom: 15px;
-    }
-    .tips ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    .tips li {
-      padding: 8px 0 8px 25px;
-      position: relative;
-    }
-    .tips li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #667eea;
-      font-weight: 600;
-    }
-    .footer {
-      background: #f5f5f5;
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid #e0e0e0;
-      color: #666;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      .header h1 {
-        font-size: 1.8em;
-      }
-      .content {
-        padding: 20px;
-      }
-      table, th, td {
-        font-size: 0.9em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Itinerář Palermo 22.–25. ledna 2026</title>
+    <link rel="stylesheet" href="assets/travel.css">
 </head>
 <body>
+    <div class="travel-container">
+        <header class="hero">
+            <h1>Palermo · Monreale · Cefalù</h1>
+            <p>22.–25. ledna 2026 · Zimní výlet do Sicílie</p>
+            <div class="meta">
+                <span>🍋 Street food &amp; trhy</span>
+                <span>🏛️ UNESCO památky</span>
+                <span>🌊 Výlet k moři</span>
+            </div>
+        </header>
 
-<div class="container">
-  <div class="header">
-    <h1>Itinerář Palermo 22.–25. ledna 2026</h1>
-    <p>Zimní zážitky, památky, gastronomie a trhy v Palermu</p>
-  </div>
+        <main class="content">
+            <section class="day">
+                <span class="section-label">Čtvrtek 22. ledna</span>
+                <h2>Přílet &amp; první sicilský večer</h2>
+                <div class="day-subtitle">Let z Bratislavy · Antica Focacceria · večerní Palermo</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">18:45</td>
+                            <td class="place">Letiště Bratislava</td>
+                            <td>✈️ Odlet do Palerma</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Palermo</td>
+                            <td>Přílet · přesun na ubytování v centru</td>
+                        </tr>
+                        <tr>
+                            <td class="time">21:00</td>
+                            <td class="place">Antica Focacceria San Francesco</td>
+                            <td>🍽️ Večeře · panelle, arancini, sfincione</td>
+                        </tr>
+                        <tr>
+                            <td class="time">22:00</td>
+                            <td class="place">Quattro Canti / Piazza Politeama</td>
+                            <td>Noční procházka historickým centrem</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-  <div class="content">
+            <section class="day">
+                <span class="section-label">Pátek 23. ledna</span>
+                <h2>Historické Palermo &amp; street food</h2>
+                <div class="day-subtitle">Katedrála · Palatinská kaple · trhy Ballarò &amp; Capo</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Palermo Cathedral</td>
+                            <td>Návštěva katedrály · panoramatická terasa</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Normanský palác</td>
+                            <td>Palatinská kaple s mozaikami (UNESCO)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Dopoledne</td>
+                            <td class="place">Ballarò Market</td>
+                            <td>Ochutnávky street food: arancini, panelle, cannoli</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Oběd</td>
+                            <td class="place">Friggitoria Chiluzzo</td>
+                            <td>
+                                <div class="meal">
+                                    <div class="meal-title">🍽️ Tradiční smažené speciality</div>
+                                    <div class="restaurant">Arancini · crocchè · sfincione</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Kalsa &amp; Palazzo Abatellis</td>
+                            <td>Procházka aristokratickou čtvrtí · galerie renesančního umění</td>
+                        </tr>
+                        <tr>
+                            <td class="time">16:00</td>
+                            <td class="place">Caffè del Kassaro</td>
+                            <td>Espresso &amp; sladké cannoli / cassata</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Osteria dei Vespri</td>
+                            <td>Fine dining s mořskými plody &amp; sicilskými víny</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <div class="day">
-      <h2>Čtvrtek 22. ledna – Přílet a večer v Palermu</h2>
-      <div class="day-subtitle">Odlet z Bratislavy a první večer ve městě</div>
-      <ul class="activities">
-        <li>18:45 odlet z Bratislava</li>
-        <li>Večerní přílet do Palerma a přesun na ubytování v centru</li>
-        <li>Večeře v Antica Focacceria San Francesco – sicilská tradiční kuchyně</li>
-        <li>Krátká večerní procházka kolem Quattro Canti nebo Piazza Politeama</li>
-      </ul>
+            <section class="day">
+                <span class="section-label">Sobota 24. ledna</span>
+                <h2>Výlet mimo Palermo</h2>
+                <div class="day-subtitle">Cefalù u moře nebo Monreale na kopci</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Cefalù</td>
+                            <td>Prohlídka normanské katedrály · výstup na La Rocca</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Alternativa</td>
+                            <td class="place">Monreale</td>
+                            <td>Klášter &amp; katedrála s mozaikami · výhled na Palermo</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Oběd</td>
+                            <td class="place">Místní trattorie</td>
+                            <td>Čerstvé ryby · pasta con le sarde · sicilské víno</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Pobřežní promenáda</td>
+                            <td>Káva / granita · relax na pláži (podle počasí)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Palermo</td>
+                            <td>Návrat do města · volný program</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="optional">
+                    <div class="optional-title">💡 Kulturní varianta</div>
+                    <div class="restaurant">Navštivte Teatro Massimo na odpolední prohlídku nebo večerní operu.</div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Neděle 25. ledna</span>
+                <h2>Poslední den &amp; odlet</h2>
+                <div class="day-subtitle">Trhy · kavárny · suvenýry · odlet 21:25</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Villa Giulia / Foro Italico</td>
+                            <td>Lehká procházka · zahrady u moře</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Dopoledne</td>
+                            <td class="place">Mercato del Capo</td>
+                            <td>Nákupy koření · pistácie · olivový olej</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Poledne</td>
+                            <td class="place">Caffè Spinnato</td>
+                            <td>Espresso &amp; sladké cannoli</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Trattoria Ai Cascinari</td>
+                            <td>Lehký oběd před odletem</td>
+                        </tr>
+                        <tr>
+                            <td class="time">17:00</td>
+                            <td class="place">Piazza Marina</td>
+                            <td>Volný čas · nákupy designových suvenýrů</td>
+                        </tr>
+                        <tr>
+                            <td class="time">20:00</td>
+                            <td class="place">Letiště Palermo</td>
+                            <td>Vracení auta · check-in · odlet 21:25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="tips">
+                <h3>🍋 Gastronomické tipy</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4>Street food klasika</h4>
+                        <ul>
+                            <li>Antica Focacceria San Francesco – focaccia &amp; sfincione</li>
+                            <li>Ke Pani ca Meusa (slezová sendvič) jen pro odvážné</li>
+                            <li>Cannoli od Caffè del Kassaro</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Restaurace &amp; kavárny</h4>
+                        <ul>
+                            <li>Osteria dei Vespri – sezonní menu</li>
+                            <li>Trattoria Ai Cascinari – klasická sicilská kuchyně</li>
+                            <li>Caffè Spinnato – historická kavárna z 1860</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Co ochutnat</h4>
+                        <ul>
+                            <li>Pasta con le sarde · caponata · panelle</li>
+                            <li>Víno Nero d'Avola &amp; Marsala</li>
+                            <li>Dezerty cassata, granita, brioche col gelato</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="accommodation">
+                <div class="accommodation-title">🛏️ Doporučené ubytování</div>
+                <div class="accommodation-details">
+                    <div><strong>B&amp;B Palazzo Sambuca</strong> – elegantní barokní palác v Kalse</div>
+                    <div><strong>Porta di Castro</strong> – boutique pokoje vedle katedrály</div>
+                    <div><strong>Hotel Plaza Opéra</strong> – moderní design, rooftop bar</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p><span>Buon viaggio!</span> Palermo vás čeká s vůní citronů a zvukem Vespy.</p>
+        </footer>
     </div>
-
-    <div class="day">
-      <h2>Pátek 23. ledna – Historie a gastronomie</h2>
-      <div class="day-subtitle">Památky Palerma a jeho proslulé trhy</div>
-      <table>
-        <thead>
-          <tr>
-            <th class="time">Čas</th>
-            <th class="place">Místo</th>
-            <th>Aktivita</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="time">Ráno</td><td class="place">Palermo Cathedral</td><td>Návštěva mimořádně krásné katedrály</td></tr>
-          <tr><td class="time">Ráno</td><td class="place">Normanský palác</td><td>Prohlídka s Palatinskou kaplí a mozaikami (UNESCO)</td></tr>
-          <tr><td class="time">Dopoledne</td><td class="place">Ballarò Market</td><td>Ochutnávky pouličních specialit: arancini, panelle</td></tr>
-          <tr><td class="time">Oběd</td><td class="place">Friggitoria Chiluzzo</td><td>Typické sicilské smažené speciality</td></tr>
-          <tr><td class="time">Odpoledne</td><td class="place">Kalsa</td><td>Prohlídka historické čtvrti</td></tr>
-          <tr><td class="time">Odpoledne</td><td class="place">Palazzo Abatellis</td><td>Umělecké sbírky a galerie</td></tr>
-          <tr><td class="time">Odpoledne</td><td class="place">Caffè del Kassaro</td><td>Káva a sicilské dezerty: cannoli, cassata</td></tr>
-          <tr><td class="time">Večer</td><td class="place">Osteria dei Vespri</td><td>Večeře s čerstvými mořskými plody</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="day">
-      <h2>Sobota 24. ledna – Výlet mimo Palermo</h2>
-      <div class="day-subtitle">Celodenní výlet do Cefalù nebo Monreale</div>
-      <ul class="activities">
-        <li>Prohlídka historické katedrály v malebném pobřežním městě Cefalù</li>
-        <li>Alternativa: návštěva slavné katedrály v Monreale s nádhernými mozaikami</li>
-        <li>Oběd v místní taverně s mořskými plody a sicilskými specialitami</li>
-        <li>Večerní návrat do Palerma a relaxace</li>
-      </ul>
-    </div>
-
-    <div class="day">
-      <h2>Neděle 25. ledna – Poslední den s volným programem</h2>
-      <div class="day-subtitle">Nákupy, relaxace, trhy a odlet</div>
-      <ul class="activities">
-        <li>Ráno relaxační procházka v Villa Giulia nebo návštěva Mercato del Capo</li>
-        <li>Káva a dezert v Caffè Spinnato</li>
-        <li>Možnost krátké návštěvy Palermo Cathedral, pokud nebyla dřív</li>
-        <li>Volný program – galerie, trhy, nebo ZOO di Palermo</li>
-        <li>Lehký oběd v Trattoria Ai Cascinari</li>
-        <li>Odpoledne posezení na Piazza Marina</li>
-        <li>Večer přesun na letiště, odlet v 21:25</li>
-      </ul>
-    </div>
-
-    <div class="tips">
-      <h3>Doporučené restaurace a kavárny</h3>
-      <ul>
-        <li><span>Antica Focacceria San Francesco</span> – pouliční sicilské speciality</li>
-        <li><span>Friggitoria Chiluzzo</span> – smažená jídla, arancini a další</li>
-        <li><span>Osteria dei Vespri</span> – sicilské mořské plody ve moderním stylu</li>
-        <li><span>Caffè del Kassaro</span> – nejlepší cannoli a cassata</li>
-        <li><span>Trattoria Ai Cascinari</span> – tradiční sicilská kuchyně</li>
-        <li><span>Caffè Spinnato</span> – historická kavárna s výbornou kávou</li>
-      </ul>
-    </div>
-
-    <div class="tips">
-      <h3>Nejlepší památky a trhy v Palermu</h3>
-      <ul>
-        <li>Palermo Cathedral</li>
-        <li>Normanský palác a Palatinská kaple</li>
-        <li>Ballarò Market</li>
-        <li>Capo Market</li>
-        <li>Mercato del Capo</li>
-        <li>Theatre Massimo</li>
-        <li>Historická čtvrť Kalsa</li>
-        <li>Cefalù – pláž a historická katedrála</li>
-        <li>Monreale Cathedral</li>
-      </ul>
-    </div>
-
-    <footer>
-      <p>&copy; 2026 | Itinerář Palermo s doporučeními | Skupina 36–37 let</p>
-    </footer>
-  </div>
 </body>
 </html>

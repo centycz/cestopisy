@@ -1,281 +1,286 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <title>Itinerář Neapol, Ischia a Procida 26.2.–1.3. 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .container {
-      max-width: 1000px;
-      background: #fff;
-      margin: 0 auto;
-      border-radius: 15px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      overflow: hidden;
-    }
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 15px 15px 0 0;
-      margin-bottom: 40px;
-    }
-    .header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    .header p {
-      font-size: 1.1em;
-      opacity: 0.9;
-    }
-    .content {
-      padding: 0 20px;
-    }
-    .day {
-      margin-bottom: 50px;
-      border-left: 5px solid #667eea;
-      padding-left: 20px;
-    }
-    .day h2 {
-      color: #667eea;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-    .day-subtitle {
-      font-style: italic;
-      color: #666;
-      font-size: 0.95em;
-      margin-bottom: 15px;
-    }
-    ul.activities {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul.activities li {
-      padding-left: 25px;
-      position: relative;
-      margin-bottom: 12px;
-    }
-    ul.activities li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #667eea;
-      font-weight: bold;
-    }
-    .meal {
-      background: #fff3cd;
-      border-left: 4px solid #ffc107;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
-    .meal-title {
-      font-weight: 600;
-      color: #856404;
-      margin-bottom: 10px;
-    }
-    .restaurant {
-      font-size: 0.95em;
-      color: #333;
-      margin: 8px 0;
-      margin-left: 10px;
-    }
-    .accommodation {
-      background: #e8f5e9;
-      border-left: 4px solid #4caf50;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
-    .accommodation-title {
-      font-weight: 600;
-      color: #1b5e20;
-      margin-bottom: 10px;
-    }
-    .accommodation-details {
-      font-size: 0.9em;
-      color: #333;
-      margin-left: 10px;
-    }
-    .accommodation-details div {
-      margin: 6px 0;
-    }
-    .tips {
-      background: #e7f3ff;
-      border-left: 4px solid #2196F3;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
-    .tips h3 {
-      font-weight: 700;
-      color: #667eea;
-      margin-bottom: 15px;
-    }
-    .tips ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .tips li {
-      padding: 8px 0 8px 25px;
-      position: relative;
-    }
-    .tips li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      font-weight: 700;
-      color: #667eea;
-    }
-    .footer {
-      color: #666;
-      background: #f5f5f5;
-      padding: 20px;
-      border-top: 1px solid #e0e0e0;
-      text-align: center;
-      margin-top: 40px;
-    }
-    @media(max-width: 768px) {
-      .container {
-        padding: 25px 20px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Itinerář Neapol, Ischia &amp; Procida 26.2.–1.3. 2026</title>
+    <link rel="stylesheet" href="assets/travel.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Itinerář Neapol, Ischia a Procida 26.2.–1.3. 2026</h1>
-      <p>Zimní objevování, termální lázně, ostrovy a gastronomie</p>
+    <div class="travel-container">
+        <header class="hero">
+            <h1>Neapol · Ischia · Procida</h1>
+            <p>26. února – 1. března 2026 · Termální ráj &amp; barevné ostrovy</p>
+            <div class="meta">
+                <span>🛥️ Ostrovní hopping</span>
+                <span>♨️ Termální lázně &amp; wellness</span>
+                <span>🍋 Kampánská gastronomie</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="day">
+                <span class="section-label">Čtvrtek 26. února</span>
+                <h2>Přílet do Neapole &amp; transfer na Ischii</h2>
+                <div class="day-subtitle">Odlet z Bratislavy 14:15 · večerní trajekt na Ischii</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">14:15</td>
+                            <td class="place">Letiště Bratislava</td>
+                            <td>✈️ Odlet do Neapole</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Napoli Capodichino</td>
+                            <td>Přílet · přesun na molo Beverello</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Trajekt</td>
+                            <td>🛳️ Plavba na ostrov Ischia · check-in v Ischia Porto / Sant'Angelo</td>
+                        </tr>
+                        <tr>
+                            <td class="time">21:00</td>
+                            <td class="place">Ischia Porto</td>
+                            <td>Lehká večeře s výhledem na přístav</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Doporučené ubytování na Ischii</div>
+                    <div class="accommodation-details">
+                        <div><strong>Hotel Hilaron</strong> – bazén, spa, centrální poloha v Ischia Porto</div>
+                        <div><strong>Casa D'Ambra Rooms</strong> – stylový apartmán v Sant'Angelo s výhledem na moře</div>
+                        <div><strong>Mezza Luna Hotel</strong> – komfortní 3★ hotel s wellness</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Pátek 27. února</span>
+                <h2>Castello Aragonese &amp; termální lázně</h2>
+                <div class="day-subtitle">Historie na skále · přírodní horké prameny · Sant'Angelo</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Castello Aragonese</td>
+                            <td>Prohlídka hradu · panoramatické výhledy</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Dopoledne</td>
+                            <td class="place">Terme di Cavascura / Negombo</td>
+                            <td>Wellness rituály · termální bazény · bahenní zábaly</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Baia di Sorgeto</td>
+                            <td>Koupání v přírodních horkých pramenech přímo v moři</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Sant'Angelo</td>
+                            <td>Procházka po přístavu · aperitivo při západu slunce</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="meal">
+                    <div class="meal-title">🍽️ Restaurace na Ischii</div>
+                    <div class="restaurant"><strong>Al Pontile</strong> – mořské plody v Sant'Angelo</div>
+                    <div class="restaurant"><strong>Ristorante La Scogliera</strong> – tradiční kuchyně s výhledem na moře</div>
+                    <div class="restaurant"><strong>O' Salone</strong> – lokální speciality a víno</div>
+                    <div class="restaurant"><strong>Dolce Vita</strong> – sladká klasika &amp; espresso</div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Sobota 28. února</span>
+                <h2>Ischia: botanické zahrady &amp; wellness den</h2>
+                <div class="day-subtitle">Giardini La Mortella · relax u moře · večerní fine dining</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Giardini La Mortella</td>
+                            <td>Botanická zahrada s exotickými rostlinami · výhled na záliv</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Poledne</td>
+                            <td class="place">Forio / Ischia Porto</td>
+                            <td>Oběd v přístavní restauraci · místní vína</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Termální parky</td>
+                            <td>Negombo, Poseidon nebo hotelové spa – relax &amp; sauny</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Sant'Angelo</td>
+                            <td>Michelin doporučená večeře · degustace vín</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Neděle 29. února</span>
+                <h2>Přesun na barevnou Procidou</h2>
+                <div class="day-subtitle">Trajekt 40 minut · pastelová Marina Corricella</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Ischia</td>
+                            <td>Snídaně · check-out · přesun do přístavu</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Dopoledne</td>
+                            <td class="place">Trajekt Ischia → Procida</td>
+                            <td>🛥️ Plavba (cca 40 min) · výhled na Vesuv</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Poledne</td>
+                            <td class="place">Marina Corricella</td>
+                            <td>Ubytování · procházka pastelovými uličkami</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Procida</td>
+                            <td>Fotostopy Terra Murata · Belvedere dei Cannoni</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Procida</td>
+                            <td>Večeře s mořskými plody · západ slunce nad přístavem</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování na Procidě</div>
+                    <div class="accommodation-details">
+                        <div><strong>Residenza Terra Murata</strong> – historický dům s výhledem</div>
+                        <div><strong>Casa Gaia</strong> – rodinný hotel, osobní přístup</div>
+                        <div><strong>B&amp;B Procida Rooms</strong> – komfortní apartmány v Marina di Corricella</div>
+                    </div>
+                </div>
+
+                <div class="meal">
+                    <div class="meal-title">🍽️ Restaurace na Procidě</div>
+                    <div class="restaurant"><strong>Il Postiglione</strong> – nejlepší ryby &amp; mušle</div>
+                    <div class="restaurant"><strong>Ristorante da Mariano</strong> – domácí pasta &amp; limoncello</div>
+                    <div class="restaurant"><strong>O' Pirata</strong> – terasa s výhledem na přístav</div>
+                    <div class="restaurant"><strong>Trattoria La Favorita</strong> – rodinné recepty</div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Pondělí 1. března</span>
+                <h2>Procida &amp; návrat do Neapole</h2>
+                <div class="day-subtitle">Ranní procházka · poslední oběd · odlet v 16:30</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Ráno</td>
+                            <td class="place">Procida</td>
+                            <td>Procházka Marina Grande · ranní cappuccino</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Dopoledne</td>
+                            <td class="place">Terra Murata</td>
+                            <td>Vyhlídky na celý Neapolský záliv · koupě suvenýrů</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:30</td>
+                            <td class="place">Procida</td>
+                            <td>Poslední oběd – čerstvé mořské plody &amp; citrónový sorbet</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Trajekt Procida → Neapol</td>
+                            <td>Plavba zpět (40 min) · transfer na letiště</td>
+                        </tr>
+                        <tr>
+                            <td class="time">16:30</td>
+                            <td class="place">Napoli Capodichino</td>
+                            <td>Check-in · odlet do Bratislavy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="tips">
+                <h3>🌊 Tipy na zážitky navíc</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4>Výpravy z Neapole</h4>
+                        <ul>
+                            <li>Vesuv &amp; Pompeje (celodenní výlet)</li>
+                            <li>Poznávací jízda po Amalfi (Sorrento, Positano)</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Wellness doporučení</h4>
+                        <ul>
+                            <li>Terme Negombo – největší výběr bazénů</li>
+                            <li>Poseidon Gardens – pláž + termální laguny</li>
+                            <li>Baia di Sorgeto – zdarma přístupné přírodní prameny</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Co ochutnat</h4>
+                        <ul>
+                            <li>Limoncello z Procidy &amp; Ischie</li>
+                            <li>Pastiera Napoletana · sfogliatella</li>
+                            <li>Mořské ježky &amp; čerstvé mušle v sezóně</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p><span>Arrivederci!</span> Neapolský záliv vás přivítá vůní citronů a moře.</p>
+        </footer>
     </div>
-
-    <div class="content">
-      <div class="day">
-        <h2>Čtvrtek 26. února 2026 – Přílet do Neapole</h2>
-        <div class="day-subtitle">Odlet z Bratislavy 14:15, přílet v Neapoli a transfer na ostrov Ischia</div>
-        <ul class="activities">
-          <li>Odlet z Bratislavy 14:15</li>
-          <li>Přílet na letiště Napoli Capodichino v odpoledních hodinách</li>
-          <li>Transfer na přístav a trajekt na ostrov Ischia</li>
-          <li>Ubytování v Ischia Porto nebo Sant'Angelo</li>
-          <li>Lehká večeře v místní taverně s výhledem na moře</li>
-        </ul>
-      </div>
-
-      <div class="accommodation">
-        <div class="accommodation-title">Doporučené ubytování na Ischii</div>
-        <div class="accommodation-details">
-          <div><strong>Hotel Hilaron</strong> – luxusní pokoj s bazénem a terasou v Ischia Porto</div>
-          <div><strong>Casa D'Ambra Rooms</strong> – stylový apartmán s výhledem na moře v Sant'Angelo</div>
-          <div><strong>Mezza Luna Hotel</strong> – komfortní 3* hotel s wellness centrem</div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>Pátek 27. února 2026 – Ischia, Castello Aragonese a termální přírodní lázně</h2>
-        <div class="day-subtitle">Průzkum ostrova, historie a přírodní termální bazény</div>
-        <ul class="activities">
-          <li>Ráno: Prohlídka Castello Aragonese – středověký hrad na skále s výhledy</li>
-          <li>Návštěva termálních lázní Terme di Cavascura nebo Negombo</li>
-          <li>Odpočinek v přírodních termálních bazénech Baia di Sorgeto</li>
-          <li>Oběd v místní restauraci se sicilskou kuchyní</li>
-          <li>Odpoledne: Průzkum vesnice Sant'Angelo s barevnými domy a přístavem</li>
-          <li>Večeře v tradiční taverně přímo u moře</li>
-        </ul>
-      </div>
-
-      <div class="meal">
-        <div class="meal-title">Doporučené restaurace na Ischii</div>
-        <div class="restaurant"><strong>Al Pontile</strong> – sicilská kuchyně, čerstvé mořské plody v Sant'Angelo</div>
-        <div class="restaurant"><strong>Ristorante La Scogliera</strong> – tradiční kuchyně s výhledem na moře</div>
-        <div class="restaurant"><strong>O' Salone</strong> – místní speciality a ryby, přátelská atmosféra</div>
-        <div class="restaurant"><strong>Dolce Vita</strong> – italská klasika s neapolskými prvky</div>
-      </div>
-
-      <div class="day">
-        <h2>Sobota 28. února 2026 – Ischia: relax, termální koupele a gastronomie</h2>
-        <div class="day-subtitle">Druhý den na Ischii – wellness a místní objevy</div>
-        <ul class="activities">
-          <li>Ráno: Návštěva botanické zahrady Giardini La Mortella – exotické rostliny a výhledy</li>
-          <li>Oběd v přístavní restauraci s panoramatem na Neapolský záliv</li>
-          <li>Odpoledne: Volný program – koupání, procházka po vesnicích nebo relaxace v termách</li>
-          <li>Relaxace v hotelové wellness části nebo v přírodních termálních lázních</li>
-          <li>Večeře v luxusní restauraci – doporučuji Michelin-rekomendované místo</li>
-        </ul>
-      </div>
-
-      <div class="day">
-        <h2>Neděle 29. února 2026 – Přesun na ostrov Procida</h2>
-        <div class="day-subtitle">Trajektem z Ischie na Procidu (cca 40 minut)</div>
-        <ul class="activities">
-          <li>Ráno: Pěkný snídaně v hotelu</li>
-          <li>Transfer do přístavu a trajekt na Procidu</li>
-          <li>Ubytování na Procidě – nejlépe v Marina di Corricella nebo Marina Grande</li>
-          <li>Procházka po barevné vesnici Marina di Corricella</li>
-          <li>Oběd v tradiční taverně s mořskými plody</li>
-          <li>Večer: Relax a procházka přístavem se západem slunce</li>
-        </ul>
-      </div>
-
-      <div class="accommodation">
-        <div class="accommodation-title">Doporučené ubytování na Procidě</div>
-        <div class="accommodation-details">
-          <div><strong>Residenza Terra Murata</strong> – stylové pokoje v historické části s výhledem</div>
-          <div><strong>Casa Gaia</strong> – příjemný rodinný hotel se skvělou obsluhou</div>
-          <div><strong>B&B Procida Rooms</strong> – komfortní apartmány v Marina di Corricella</div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>Pondělí 1. března 2026 – Procida a návrat do Neapole, odlet</h2>
-        <div class="day-subtitle">Poslední ráno na Procidě, polední oběd a odlet z Neapole v 16:30</div>
-        <ul class="activities">
-          <li>Ráno: Poslední procházka barevnými uličkami Procidy</li>
-          <li>Návštěva přístavů Marina Grande a Terra Murata</li>
-          <li>Oběd v tradiční restauraci s místními specialitami</li>
-          <li>Trajektem zpět do Neapole (cca 40 minut)</li>
-          <li>Transfer na letiště Napoli Capodichino</li>
-          <li>Odlet do Bratislavy v 16:30</li>
-        </ul>
-      </div>
-
-      <div class="meal">
-        <div class="meal-title">Doporučené restaurace na Procidě</div>
-        <div class="restaurant"><strong>Il Postiglione</strong> – nejlepší ryby a mušle na ostrově</div>
-        <div class="restaurant"><strong>Ristorante da Mariano</strong> – tradiční neapolská a sicilská kuchyně</div>
-        <div class="restaurant"><strong>O' Pirata</strong> – přátelská restaurace s výhledem na přístav</div>
-        <div class="restaurant"><strong>Trattoria La Favorita</strong> – rodinnými recepty připravená jídla</div>
-      </div>
-
-      <div class="tips">
-        <h3>Tipy na další místa a aktivity</h3>
-        <ul>
-          <li>Návštěva Vesuviánského vulkánu a Pompejí (lze jako jednodenní výlet)</li>
-          <li>Pláže a přírodně chráněné zátoky pro koupání a snorkeling</li>
-          <li>Historické horské vesnice a kláštery na Ischii – Fontana a Forio</li>
-          <li>Místní tržiště pro tradičními produkty – papriky, citróny, med</li>
-          <li>Večerní zájezdy na observatoř nebo noční rybaření</li>
-          <li>Wellness a spa centra v hotelech se slanou vodou a bahnem</li>
-        </ul>
-      </div>
-
-    </div>
-    <div class="footer">
-      <p>&copy; 2026 | Itinerář Neapol, Ischia a Procida</p>
-    </div>
-  </div>
 </body>
 </html>
