@@ -644,3 +644,101 @@ body {
   color: var(--primary);
   font-weight: 700;
 }
+
+/* Glossary tooltip styles */
+.glossary-term,
+[data-glossary] {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+  border-bottom: 1px dashed rgba(14, 165, 233, 0.6);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.glossary-term::after,
+[data-glossary]::after {
+  content: "i";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: rgba(14, 165, 233, 0.18);
+  color: var(--accent);
+}
+
+.glossary-term.is-active,
+.glossary-term:hover,
+.glossary-term:focus,
+[data-glossary].is-active,
+[data-glossary]:hover,
+[data-glossary]:focus {
+  color: var(--primary-dark);
+  border-color: rgba(37, 99, 235, 0.65);
+  outline: none;
+}
+
+.glossary-term.is-active::after,
+.glossary-term:hover::after,
+.glossary-term:focus::after,
+[data-glossary].is-active::after,
+[data-glossary]:hover::after,
+[data-glossary]:focus::after {
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--primary-dark);
+}
+
+.glossary-popover {
+  position: absolute;
+  z-index: 1000;
+  max-width: min(320px, calc(100vw - 32px));
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  padding: 20px 22px 18px 22px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.glossary-popover.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.glossary-popover .glossary-title {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.glossary-popover .glossary-description {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.glossary-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.glossary-close:hover,
+.glossary-close:focus {
+  color: var(--primary);
+  outline: none;
+}
