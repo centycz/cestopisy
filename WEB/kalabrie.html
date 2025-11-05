@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="assets/travel.css">
 </head>
 <body>
-    <div class="travel-container">
+    <div class="travel-container" data-language-container>
+        <div class="language-switcher" data-language-toggle>
+            <button type="button" class="is-active" data-language-option="cs" aria-pressed="true">Čeština</button>
+            <button type="button" data-language-option="it" aria-pressed="false">Italiano</button>
+        </div>
+        <div class="language-pane is-active" data-language="cs">
         <header class="hero">
             <h1>Itinerář Kalábrie</h1>
             <p>14.–17. listopadu 2025</p>
@@ -403,7 +408,348 @@
         <footer class="footer">
             <p><span>Buena strada!</span> Užijte si Kalábrii · itinerář připraven 24. října 2025</p>
         </footer>
+        </div>
+
+        <div class="language-pane" data-language="it" hidden>
+            <header class="hero">
+                <h1>Itinerario Calabria</h1>
+                <p>14–17 novembre 2025</p>
+                <div class="meta">
+                    <span>🚗 Road trip tra costa e montagne</span>
+                    <span>🍽️ Tappe gourmet</span>
+                    <span>🍷 Degustazione di vini Cirò</span>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="day">
+                    <span class="section-label">Venerdì 14 novembre</span>
+                    <h2>Arrivo in Calabria</h2>
+                    <div class="day-subtitle">Lamezia Terme · Agriturismo Costantino</div>
+                    <table class="itinerary-table">
+                        <thead>
+                            <tr>
+                                <th>Orario</th>
+                                <th>Luogo</th>
+                                <th>Attività</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">Pomeriggio</td>
+                                <td class="place">Lamezia Terme</td>
+                                <td>✈️ Arrivo in Calabria</td>
+                            </tr>
+                            <tr>
+                                <td class="time">Sera</td>
+                                <td class="place">Agriturismo Costantino</td>
+                                <td>🛏️ Check-in · cena · relax nell'area wellness</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="meal">
+                        <div class="meal-title">🍽️ Cena – Agriturismo Costantino (Antipasti)</div>
+
+                        <div class="menu-grid">
+                            <article class="menu-card">
+                                <h3><span data-glossary="scamone">Scamone</span> di «<span data-glossary="podolica">Podolica</span>»</h3>
+                                <p>Controfiletto di manzo marinato e affumicato con valerianella, maionese di avocado, frutta di stagione e frutta secca</p>
+                                <span class="price">14&nbsp;€</span>
+                            </article>
+                            <article class="menu-card">
+                                <h3>Sformato di zucca</h3>
+                                <p>Crema di <span data-glossary="taleggio">taleggio</span>, frutta secca e cialda croccante con olio extra vergine «Costantino»</p>
+                                <span class="price">10&nbsp;€</span>
+                            </article>
+                            <article class="menu-card">
+                                <h3><span data-glossary="baccala">Baccalà</span></h3>
+                                <p>Merluzzo essiccato cotto confit nell'olio, spuma di pomodoro e crumble di olive nere</p>
+                                <span class="price">15&nbsp;€</span>
+                            </article>
+                        </div>
+
+                        <div class="menu-group">
+                            <div class="menu-group-header">
+                                <h3>Selezione di formaggi calabresi</h3>
+                                <span class="price">14&nbsp;€</span>
+                            </div>
+                            <ul class="menu-list">
+                                <li><span data-glossary="pecorino">Pecorino</span> a latte crudo dall'altopiano di Vibo – «Az. Crudo»</li>
+                                <li><span data-glossary="caciocavallo">Caciocavallo</span> di Ciminà</li>
+                                <li><span data-glossary="robiola">Robiola</span> di capra – fattoria Sant’Anna</li>
+                                <li><span data-glossary="ricotta">Ricotta</span> fresca</li>
+                                <li>Formaggio di capra semi stagionato – Sant’Anna</li>
+                                <li>Accompagnamento: miele di castagno, marmellata d'arancia «Belladonna Costantino», confettura di peperoni «Rogianese Costantino»</li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-group">
+                            <div class="menu-group-header">
+                                <h3>Selezione di salumi di suino nero</h3>
+                                <span class="price">14&nbsp;€</span>
+                            </div>
+                            <ul class="menu-list">
+                                <li><span data-glossary="pancetta">Pancetta</span> – Az. Romano (con grissino all'olio)</li>
+                                <li><span data-glossary="capocollo">Capocollo</span> – «Az. Romano»</li>
+                                <li><span data-glossary="soppressata">Soppressata</span> di suino nero della Sila – «Azienda Romano»</li>
+                                <li>Crostino con <span data-glossary="nduja">’nduja</span> di suino nero – «Az. Romano»</li>
+                                <li>Filetto di suino nero – «Az. Romano»</li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-group">
+                            <div class="menu-group-header">
+                                <h3>Degustazione di fritti</h3>
+                                <span class="price">7&nbsp;€</span>
+                            </div>
+                            <ul class="menu-list">
+                                <li><span data-glossary="suppli">Supplì</span> al pomodoro con <span data-glossary="caciocavallo">caciocavallo</span></li>
+                                <li>Polpetta di ricotta con soppressata</li>
+                                <li>Polpetta di carne</li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-group">
+                            <div class="menu-group-header">
+                                <h3>Selezione di verdure</h3>
+                                <span class="price">11&nbsp;€</span>
+                            </div>
+                            <ul class="menu-list">
+                                <li>Zuppa di fagioli «de.co di Cortale»</li>
+                                <li>Insalata di misticanza con funghi porcini sott'olio e mozzarella di bufala</li>
+                                <li>Involtino di cavolo con ricotta e mandorle su crema di zucca</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="day">
+                    <span class="section-label">Sabato 15 novembre</span>
+                    <h2>Entroterra calabrese</h2>
+                    <div class="day-subtitle">Costantino → Cosenza → Camigliatello Silano → San Giovanni in Fiore → Santa Severina → Cirò Marina</div>
+                    <table class="itinerary-table">
+                        <thead>
+                            <tr>
+                                <th>Orario</th>
+                                <th>Luogo</th>
+                                <th>Attività</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">08:30</td>
+                                <td class="place">Agriturismo</td>
+                                <td>🚗 Partenza verso l'entroterra</td>
+                            </tr>
+                            <tr>
+                                <td class="time">09:30</td>
+                                <td class="place">Cosenza</td>
+                                <td>Passeggiata nel centro storico · Duomo · Corso Telesio</td>
+                            </tr>
+                            <tr>
+                                <td class="time">11:30</td>
+                                <td class="place">Camigliatello Silano</td>
+                                <td>Arrivo in montagna · atmosfera del Parco Nazionale della Sila</td>
+                            </tr>
+                            <tr>
+                                <td class="time">12:00–13:30</td>
+                                <td class="place">Camigliatello</td>
+                                <td>
+                                    <div class="meal">
+                                        <div class="meal-title">🍽️ Pranzo – cucina di montagna</div>
+                                        <div class="restaurant">⭐ Mercato Silano – Arturo Falcone (carni &amp; tartufo)</div>
+                                        <div class="restaurant">Sorelle Falcone (paste)</div>
+                                        <div class="restaurant">Ristorante I Ventura (selvaggina)</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time">14:00</td>
+                                <td class="place">San Giovanni in Fiore</td>
+                                <td>Visita all'Abbazia Florense · assaggio di <span data-glossary="pitta">pitta 'mpigliata</span></td>
+                            </tr>
+                            <tr>
+                                <td class="time">15:30</td>
+                                <td class="place">Santa Severina</td>
+                                <td>Castello normanno · borgo arroccato</td>
+                            </tr>
+                            <tr>
+                                <td class="time">17:00</td>
+                                <td class="place">Cirò Marina</td>
+                                <td>Check-in al wine resort · tramonto sui vigneti</td>
+                            </tr>
+                            <tr>
+                                <td class="time">20:00</td>
+                                <td class="place">Cantina Dell'Aquila</td>
+                                <td>🍷 Degustazione guidata di vini Cirò</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="highlight-card accent-gold">
+                        <h3>🥾 Suggerimenti per l'entroterra</h3>
+                        <ul>
+                            <li>Prenota la degustazione in cantina con anticipo</li>
+                            <li>Porta un maglione caldo – in Sila le temperature scendono</li>
+                            <li>Fermati per il pane di San Giovanni in Fiore (Presidio Slow Food)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="day">
+                    <span class="section-label">Domenica 16 novembre</span>
+                    <h2>Tropea &amp; Capo Vaticano</h2>
+                    <div class="day-subtitle">Cirò Marina → Pizzo → Tropea → Capo Vaticano</div>
+                    <table class="itinerary-table">
+                        <thead>
+                            <tr>
+                                <th>Orario</th>
+                                <th>Luogo</th>
+                                <th>Attività</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">08:00</td>
+                                <td class="place">Cirò Marina</td>
+                                <td>Colazione in resort · partenza verso la costa tirrenica</td>
+                            </tr>
+                            <tr>
+                                <td class="time">10:30</td>
+                                <td class="place">Pizzo</td>
+                                <td>Passeggiata nel centro storico · Castello Murat</td>
+                            </tr>
+                            <tr>
+                                <td class="time">11:15</td>
+                                <td class="place">Piazza della Repubblica</td>
+                                <td>
+                                    <div class="meal">
+                                        <div class="meal-title">🍨 <span data-glossary="tartufo">Tartufo di Pizzo</span></div>
+                                        <div class="restaurant">Degustazione del famoso gelato artigianale</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time">12:30</td>
+                                <td class="place">Tropea</td>
+                                <td>Centro storico · chiesa di Santa Maria dell'Isola · pranzo vista mare</td>
+                            </tr>
+                            <tr>
+                                <td class="time">15:00</td>
+                                <td class="place">Spiaggia di Tropea</td>
+                                <td>Tempo libero · scatti fotografici sulle scogliere</td>
+                            </tr>
+                            <tr>
+                                <td class="time">17:30</td>
+                                <td class="place">Capo Vaticano</td>
+                                <td>Vista sul tramonto · aperitivo panoramico</td>
+                            </tr>
+                            <tr>
+                                <td class="time">20:00</td>
+                                <td class="place">Tropea</td>
+                                <td>Cena a base di cipolla di Tropea · rientro in hotel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="highlight-card accent-blue">
+                        <h3>📸 Spot imperdibili</h3>
+                        <ul>
+                            <li>Belvedere di Santa Maria dell'Isola</li>
+                            <li>Vista su Stromboli al tramonto da Capo Vaticano</li>
+                            <li>Vicoli di Tropea con lampioni serali</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="day">
+                    <span class="section-label">Lunedì 17 novembre</span>
+                    <h2>La Castella &amp; ritorno</h2>
+                    <div class="day-subtitle">Tropea → Soverato → Le Castella → Lamezia Terme</div>
+                    <table class="itinerary-table">
+                        <thead>
+                            <tr>
+                                <th>Orario</th>
+                                <th>Luogo</th>
+                                <th>Attività</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">08:30</td>
+                                <td class="place">Tropea</td>
+                                <td>Colazione finale in centro · check-out</td>
+                            </tr>
+                            <tr>
+                                <td class="time">10:30</td>
+                                <td class="place">Soverato</td>
+                                <td>Pausa caffè sul lungomare · breve passeggiata</td>
+                            </tr>
+                            <tr>
+                                <td class="time">12:00</td>
+                                <td class="place">Le Castella</td>
+                                <td>Visita al castello aragonese sul mare · pranzo leggero</td>
+                            </tr>
+                            <tr>
+                                <td class="time">15:00</td>
+                                <td class="place">Botricello</td>
+                                <td>Sosta per dolci e souvenir gastronomici</td>
+                            </tr>
+                            <tr>
+                                <td class="time">17:00</td>
+                                <td class="place">Lamezia Terme</td>
+                                <td>🚗 Riconsegna dell'auto e partenza</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="tips">
+                        <h3>🎯 Informazioni chiave</h3>
+                        <div class="tip-grid">
+                            <div class="tip-card">
+                                <h4>⚠️ Prenotazioni obbligatorie</h4>
+                                <ul>
+                                    <li>Cirò Marina – Cantina F.lli Dell'Aquila (degustazione)</li>
+                                    <li>San Floro – Nido di Seta (manifattura della seta)</li>
+                                </ul>
+                            </div>
+                            <div class="tip-card">
+                                <h4>📸 Migliori spot fotografici</h4>
+                                <ul>
+                                    <li>Capo Vaticano – tramonto</li>
+                                    <li>Tropea – Santa Maria dell'Isola all'ora d'oro</li>
+                                    <li>Le Castella – castello sullo scoglio</li>
+                                </ul>
+                            </div>
+                            <div class="tip-card">
+                                <h4>🌡️ Meteo di novembre</h4>
+                                <ul>
+                                    <li>Temperature 15–20 °C · sere più fresche</li>
+                                    <li>Bagni solo simbolici</li>
+                                    <li>Porta una giacca leggera e scarpe comode</li>
+                                </ul>
+                            </div>
+                            <div class="tip-card">
+                                <h4>💡 Consigli bonus</h4>
+                                <ul>
+                                    <li>Possibile inserire Stilo la domenica se resta tempo</li>
+                                    <li>Novembre = pochi turisti, autenticità massima</li>
+                                    <li>Alloggio consigliato: Carmen House – ottimo rapporto qualità/prezzo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p><span>Buona strada!</span> Goditi la Calabria · itinerario aggiornato il 24 ottobre 2025</p>
+            </footer>
+        </div>
+
         <script src="assets/glossary.js" defer></script>
+        <script src="assets/language-toggle.js" defer></script>
     </div>
 </body>
 </html>

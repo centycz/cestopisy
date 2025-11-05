@@ -75,6 +75,101 @@
       description:
         "Legendární zmrzlinový dezert ve tvaru koule plněný tekutou čokoládou. Vznikl v městečku Pizzo v Kalábrii.",
     },
+    tapas: {
+      title: "Tapas",
+      description:
+        "Španělské malé porce jídel podávané k nápojům. Sdílí se u stolu a často tvoří pestrou degustační večeři.",
+    },
+    jamoniberico: {
+      title: "Jamón ibérico",
+      description:
+        "Prémiová španělská sušená šunka z černých iberských prasat. Má máslovou strukturu a intenzivní chuť.",
+    },
+    salmorejo: {
+      title: "Salmorejo",
+      description:
+        "Hustá studená polévka z rajčat, chleba, olivového oleje a česneku typická pro Córdobu. Podává se s vejcem a šunkou.",
+    },
+    flamenco: {
+      title: "Flamenco",
+      description:
+        "Andaluský umělecký žánr kombinující zpěv, kytaru, tanec a rytmický potlesk. Vznikl v komunitách andaluských Romů.",
+    },
+    sherry: {
+      title: "Sherry",
+      description:
+        "Fortifikované víno z oblasti Jerez na jihu Španělska. Zraje metodou solera a má široké spektrum chutí od suchých po sladké.",
+    },
+    meze: {
+      title: "Meze",
+      description:
+        "Sada malých jídel typická pro východní Středomoří. Na Kypru zahrnuje kombinaci grilovaného masa, zeleniny a dipů.",
+    },
+    halloumi: {
+      title: "Halloumi",
+      description:
+        "Tradiční kyperský polotvrdý sýr z ovčího a kozího mléka. Díky vyššímu bodu tání se hodí na grilování či smažení.",
+    },
+    kleftiko: {
+      title: "Kleftiko",
+      description:
+        "Pomalu pečené skopové nebo jehněčí maso marinované v bylinkách. Tradičně se připravuje v uzavřené peci.",
+    },
+    zivania: {
+      title: "Zivania",
+      description:
+        "Silný kyperský destilát z hroznů a hroznových výlisků. Podává se jako aperitiv nebo digestiv, často vychlazený.",
+    },
+    loukoumades: {
+      title: "Loukoumades",
+      description:
+        "Smažené kuličky z kynutého těsta přelité medem nebo sirupem. Oblíbený řecký a kyperský dezert.",
+    },
+    aperitivo: {
+      title: "Aperitivo",
+      description:
+        "Italský zvyk podávat před večeří lehké nápoje a drobné občerstvení. Slouží k povzbuzení chuti k jídlu.",
+    },
+    panelle: {
+      title: "Panelle",
+      description:
+        "Sicilské placky z cizrnové mouky smažené do křupava. Často se podávají v housce jako street food.",
+    },
+    arancini: {
+      title: "Arancini",
+      description:
+        "Smažené rýžové koule plněné ragú, mozzarellou nebo pistáciemi. Oblíbená sicilská streetfoodová specialita.",
+    },
+    sfincione: {
+      title: "Sfincione",
+      description:
+        "Nadýchaný sicilský koláč podobný pizze, pokrytý rajčatovou omáčkou, cibulí a sýrem caciocavallo.",
+    },
+    cannoli: {
+      title: "Cannoli",
+      description:
+        "Trubičky z křupavého těsta plněné sladkou ricottou. Patří mezi nejslavnější sicilské dezerty.",
+    },
+    cassata: {
+      title: "Cassata",
+      description:
+        "Tradiční sicilský dort z piškotu, ricotty, kandovaného ovoce a marcipánu. Připravuje se v mnoha regionálních variantách.",
+    },
+    crocche: {
+      title: "Crocchè",
+      description:
+        "Smažené bramborové krokety původem z Neapole a Sicílie. Ochucují se sýrem, petrželí nebo šunkou.",
+    },
+    granita: {
+      title: "Granita",
+      description:
+        "Ledový dezert z jemně drceného ledu ochuceného ovocem nebo kávou. Na Sicílii se často podává k snídani s brioškou.",
+    },
+    pastasarde: {
+      title: "Pasta con le sarde",
+      description:
+        "Těstoviny s čerstvými sardinkami, fenyklovou natí, piniemi a rozinkami. Typické jídlo z Palerma.",
+    },
   };
 
   document.addEventListener("DOMContentLoaded", () => {
