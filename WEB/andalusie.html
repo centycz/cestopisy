@@ -1,367 +1,487 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <title>Andalusie 25.2.–4.3. 2026 – Itinerář</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .container {
-      max-width: 1000px;
-      background: #fff;
-      margin: 0 auto;
-      border-radius: 15px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-      overflow: hidden;
-    }
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 15px 15px 0 0;
-      margin-bottom: 40px;
-    }
-    .header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    .header p {
-      font-size: 1.1em;
-      opacity: 0.9;
-    }
-    .content {
-      padding: 0 20px;
-    }
-    .day {
-      margin-bottom: 50px;
-      border-left: 5px solid #667eea;
-      padding-left: 20px;
-    }
-    .day h2 {
-      color: #667eea;
-      font-size: 1.8em;
-      margin-bottom: 20px;
-    }
-    .day-subtitle {
-      font-style: italic;
-      color: #666;
-      font-size: 0.95em;
-      margin-bottom: 15px;
-    }
-    ul.activities {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul.activities li {
-      padding-left: 25px;
-      position: relative;
-      margin-bottom: 12px;
-    }
-    ul.activities li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #667eea;
-      font-weight: bold;
-    }
-    .meal {
-      background: #fff3cd;
-      border-left: 4px solid #ffc107;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
-    .meal-title {
-      font-weight: 600;
-      color: #856404;
-      margin-bottom: 10px;
-    }
-    .restaurant {
-      font-size: 0.95em;
-      color: #333;
-      margin: 8px 0;
-      margin-left: 10px;
-    }
-    .accommodation {
-      background: #e8f5e9;
-      border-left: 4px solid #4caf50;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
-    .accommodation-title {
-      font-weight: 600;
-      color: #1b5e20;
-      margin-bottom: 10px;
-    }
-    .accommodation-details {
-      font-size: 0.9em;
-      color: #333;
-      margin-left: 10px;
-    }
-    .accommodation-details div {
-      margin: 6px 0;
-    }
-    .tips {
-      background: #e7f3ff;
-      border-left: 4px solid #2196F3;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
-    .tips h3 {
-      font-weight: 700;
-      color: #667eea;
-      margin-bottom: 15px;
-    }
-    .tips ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .tips li {
-      padding: 8px 0 8px 25px;
-      position: relative;
-    }
-    .tips li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      font-weight: 700;
-      color: #667eea;
-    }
-    .footer {
-      color: #666;
-      background: #f5f5f5;
-      padding: 20px;
-      border-top: 1px solid #e0e0e0;
-      text-align: center;
-      margin-top: 40px;
-    }
-    @media(max-width: 768px) {
-      .container {
-        padding: 25px 20px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andalusie 25.2.–4.3. 2026 – Roadtrip</title>
+    <link rel="stylesheet" href="assets/travel.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Andalusie 25.2.–4.3. 2026</h1>
-      <p>Jih Španělska: Malaga, Granada, Cordóba, Sevilla, Cádiz, Tarifa, Gibraltar, Ronda</p>
+    <div class="travel-container">
+        <header class="hero">
+            <h1>Andalusie · Malaga · Granada · Sevilla</h1>
+            <p>25. února – 4. března 2026 · 2 páry · 8 nocí</p>
+            <div class="meta">
+                <span>🚗 Roadtrip 1 400 km</span>
+                <span>🏰 UNESCO památky &amp; bílé vesnice</span>
+                <span>🍷 Tapas · sherry · flamenco</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="day">
+                <span class="section-label">Pátek 25. února</span>
+                <h2>Přílet do Malagy &amp; první tapas</h2>
+                <div class="day-subtitle">Odlet Bratislava 16:20 · přílet 19:55 · check-in v centru</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">19:55</td>
+                            <td class="place">Malaga Airport</td>
+                            <td>Přílet · převzetí vozu · cesta do centra (15 min)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">21:00</td>
+                            <td class="place">Hotel</td>
+                            <td>Check-in · krátký odpočinek</td>
+                        </tr>
+                        <tr>
+                            <td class="time">21:30</td>
+                            <td class="place">El Pimpi</td>
+                            <td>🍷 Večeře: tapas, jamón ibérico, místní vína</td>
+                        </tr>
+                        <tr>
+                            <td class="time">23:00</td>
+                            <td class="place">Centro Histórico</td>
+                            <td>Noční procházka po Calle Larios &amp; katedrále</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování Malaga · noc 25.2.</div>
+                    <div class="accommodation-details">
+                        <div><strong>Hotel Molina Lario</strong> – rooftop bazén, výhled na přístav</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Sobota 26. února</span>
+                <h2>Granada &amp; Alhambra</h2>
+                <div class="day-subtitle">Malaga → Granada (120 km · 1 h 30) · Alhambra &amp; flamenco</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">08:00</td>
+                            <td class="place">Malaga</td>
+                            <td>Snídaně · odjezd do Granady</td>
+                        </tr>
+                        <tr>
+                            <td class="time">10:00</td>
+                            <td class="place">Alhambra</td>
+                            <td>🎟️ Prohlídka Nasrid Paláců · Generalife (nutná rezervace)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">13:30</td>
+                            <td class="place">Granada Centro</td>
+                            <td>Oběd &amp; tapas v historickém centru</td>
+                        </tr>
+                        <tr>
+                            <td class="time">15:00</td>
+                            <td class="place">Mirador de San Nicolás</td>
+                            <td>Výhledy na Alhambru &amp; Sierra Nevada</td>
+                        </tr>
+                        <tr>
+                            <td class="time">17:00</td>
+                            <td class="place">Sacromonte</td>
+                            <td>Gitánská čtvrť · večerní flamenco show (doporučeno)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="meal">
+                    <div class="meal-title">🍽️ Granada foodie tipy</div>
+                    <div class="restaurant"><strong>Bodegas Castañeda</strong> – legendární tapas &amp; vermut</div>
+                    <div class="restaurant"><strong>Mirador de Morayma</strong> – romantická večeře s výhledem</div>
+                </div>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování Granada · noc 26.2.</div>
+                    <div class="accommodation-details">
+                        <div><strong>Hotel Casa 1800 Granada</strong> – historický palác v Albaycínu</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Neděle 27. února</span>
+                <h2>Córdoba – Mezquita &amp; dvorky</h2>
+                <div class="day-subtitle">Granada → Córdoba (165 km · 2 h) · arabská architektura &amp; řeka Guadalquivir</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">09:00</td>
+                            <td class="place">Córdoba</td>
+                            <td>Příjezd · vstup do Mezquity (nejlépe ranní slot)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:00</td>
+                            <td class="place">Palacio de la Merced</td>
+                            <td>Prohlídka kláštera &amp; patio</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:30</td>
+                            <td class="place">Puente Romano</td>
+                            <td>Ikonický římský most · fotostop</td>
+                        </tr>
+                        <tr>
+                            <td class="time">14:00</td>
+                            <td class="place">Taberna Luque</td>
+                            <td>Oběd: salmorejo · iberico · lokální vína</td>
+                        </tr>
+                        <tr>
+                            <td class="time">16:00</td>
+                            <td class="place">Alcázar de los Reyes Cristianos</td>
+                            <td>Zahrady · věže · historie katolických monarchů</td>
+                        </tr>
+                        <tr>
+                            <td class="time">18:00</td>
+                            <td class="place">Palacio de Viana</td>
+                            <td>12 patii plných květin</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="meal">
+                    <div class="meal-title">🍷 Córdoba foodie tipy</div>
+                    <div class="restaurant"><strong>Bodegas Campos</strong> – tradiční bodega s patii</div>
+                    <div class="restaurant"><strong>Mercado Victoria</strong> – večerní tapas &amp; gin-bar</div>
+                </div>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování Córdoba · noc 27.2.</div>
+                    <div class="accommodation-details">
+                        <div><strong>Balcón de Córdoba</strong> – hotel se střešní terasou</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Pondělí 28. února</span>
+                <h2>Sevilla – katedrála, Alcázar &amp; flamenco</h2>
+                <div class="day-subtitle">Córdoba → Sevilla (135 km · 1 h 45) · největší gotická katedrála</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">09:00</td>
+                            <td class="place">Sevilla</td>
+                            <td>Příjezd · parkování u Plaza de Armas</td>
+                        </tr>
+                        <tr>
+                            <td class="time">10:00</td>
+                            <td class="place">Catedral de Sevilla</td>
+                            <td>Prohlídka · výstup na Giraldu</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:00</td>
+                            <td class="place">Real Alcázar</td>
+                            <td>Královské paláce &amp; zahrady (rezervace předem)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">14:00</td>
+                            <td class="place">Barrio Santa Cruz</td>
+                            <td>Oběd v tapas barech · úzké uličky</td>
+                        </tr>
+                        <tr>
+                            <td class="time">16:00</td>
+                            <td class="place">Plaza de España</td>
+                            <td>Ikonické azulejos · projížďka na loďce</td>
+                        </tr>
+                        <tr>
+                            <td class="time">18:00</td>
+                            <td class="place">Metropol Parasol</td>
+                            <td>„Las Setas“ – moderní architektura &amp; západ slunce</td>
+                        </tr>
+                        <tr>
+                            <td class="time">21:00</td>
+                            <td class="place">Tablao Flamenco</td>
+                            <td>Noční flamenco show + večeře</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="meal">
+                    <div class="meal-title">🍴 Sevilla foodie tipy</div>
+                    <div class="restaurant"><strong>El Rinconcillo</strong> – nejstarší tapas bar (1670)</div>
+                    <div class="restaurant"><strong>La Azotea</strong> – moderní tapas a sherry</div>
+                </div>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování Sevilla · noc 28.2.</div>
+                    <div class="accommodation-details">
+                        <div><strong>Hotel Alfonso XIII</strong> – ikonický palácový hotel</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Úterý 1. března</span>
+                <h2>Atlantik: Cádiz · Tarifa · Gibraltar</h2>
+                <div class="day-subtitle">Sevilla → Cádiz → Tarifa → Gibraltar (celkem 320 km)</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">07:30</td>
+                            <td class="place">Sevilla</td>
+                            <td>Brzký odjezd směrem Cádiz</td>
+                        </tr>
+                        <tr>
+                            <td class="time">09:30</td>
+                            <td class="place">Cádiz</td>
+                            <td>Procházka starým městem · Torre Tavira · katedrála</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:00</td>
+                            <td class="place">Tarifa</td>
+                            <td>Oběd s výhledem na Afriku · Playa de los Lances</td>
+                        </tr>
+                        <tr>
+                            <td class="time">15:00</td>
+                            <td class="place">Gibraltar</td>
+                            <td>Vjezd na britské území · check-in na jachtě</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Main Street</td>
+                            <td>Nákupy · britské bary · relax na promenádě</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování Gibraltar · noci 1.–2.3.</div>
+                    <div class="accommodation-details">
+                        <div><strong>Sunborn Yacht Hotel</strong> – luxusní plovoucí hotel v přístavu</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Středa 2. března</span>
+                <h2>Gibraltar z vrcholku skály</h2>
+                <div class="day-subtitle">Lanovka · opice Macaques · vojenské tunely</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">09:00</td>
+                            <td class="place">Cable Car Top Station</td>
+                            <td>Lanovkou na vrchol skály · panoramatické výhledy</td>
+                        </tr>
+                        <tr>
+                            <td class="time">10:30</td>
+                            <td class="place">Windsor Suspension Bridge</td>
+                            <td>Adrenalinová lávka nad útesy</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:30</td>
+                            <td class="place">St Michael's Cave</td>
+                            <td>Osvětlená jeskyně s koncertním sálem</td>
+                        </tr>
+                        <tr>
+                            <td class="time">13:00</td>
+                            <td class="place">The Clipper</td>
+                            <td>Oběd v britském pubu – fish &amp; chips / burgery</td>
+                        </tr>
+                        <tr>
+                            <td class="time">15:00</td>
+                            <td class="place">Great Siege Tunnels</td>
+                            <td>Historické tunely z 18. století</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Marina Bay</td>
+                            <td>Sunset drink na palubě Sunborn Yacht</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Čtvrtek 3. března</span>
+                <h2>Ronda – město nad propastí</h2>
+                <div class="day-subtitle">Gibraltar → Ronda (140 km · 2 h 30) · bílé vesnice Serranía</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">08:30</td>
+                            <td class="place">Gibraltar</td>
+                            <td>Check-out · cesta přes bílá městečka (Casares, Gaucín)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:30</td>
+                            <td class="place">Ronda</td>
+                            <td>Příjezd · Puente Nuevo · výhledy do kaňonu El Tajo</td>
+                        </tr>
+                        <tr>
+                            <td class="time">13:00</td>
+                            <td class="place">Restaurante Albacara</td>
+                            <td>Oběd s panoramatem · iberská šunka · vína z Serranía</td>
+                        </tr>
+                        <tr>
+                            <td class="time">15:00</td>
+                            <td class="place">Plaza de Toros</td>
+                            <td>Muzeum býčích zápasů · aréna z 18. století</td>
+                        </tr>
+                        <tr>
+                            <td class="time">17:00</td>
+                            <td class="place">Staré město</td>
+                            <td>Procházka uličkami · výhled Mirador de Aldehuela</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Ronda</td>
+                            <td>Večeře v tradiční taverně · lokální sherry</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">Ubytování Ronda · noc 3.3.</div>
+                    <div class="accommodation-details">
+                        <div><strong>Hotel Ronda</strong> – boutique hotel s výhledem do soutěsky</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Pátek 4. března</span>
+                <h2>Návrat do Malagy &amp; odlet</h2>
+                <div class="day-subtitle">Ronda → Malaga (105 km · 1 h 30) · odlet 20:40</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">08:30</td>
+                            <td class="place">Ronda</td>
+                            <td>Snídaně · odjezd do Malagy</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:00</td>
+                            <td class="place">Malaga</td>
+                            <td>Poslední relax v přístavu Muelle Uno</td>
+                        </tr>
+                        <tr>
+                            <td class="time">13:00</td>
+                            <td class="place">Mercado Central de Atarazanas</td>
+                            <td>Oběd: čerstvé ryby &amp; tapas u pultu</td>
+                        </tr>
+                        <tr>
+                            <td class="time">15:00</td>
+                            <td class="place">Centro Histórico</td>
+                            <td>Nákupy suvenýrů · Picasso Museum (volitelně)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">18:00</td>
+                            <td class="place">Malaga Airport</td>
+                            <td>Vrácení auta · check-in</td>
+                        </tr>
+                        <tr>
+                            <td class="time">20:40</td>
+                            <td class="place">Letiště Malaga</td>
+                            <td>Odlet do Bratislavy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="tips">
+                <h3>🧭 Praktické rady pro andaluský roadtrip</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4>Rezervace &amp; logistika</h4>
+                        <ul>
+                            <li>Alhambra &amp; Real Alcázar – vstupy rezervovat min. 2 měsíce dopředu</li>
+                            <li>Pronájem auta: ideálně full-to-full, parkovací aplikace <em>ParkingLibre</em></li>
+                            <li>Gibraltar – nezapomeňte pas; měna GBP, ale přijímají i EUR</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Gastro &amp; nápoje</h4>
+                        <ul>
+                            <li>Tapas cultura: objednávejte po dvou · sdílejte</li>
+                            <li>Jamón ibérico, gazpacho, salmorejo, churros con chocolate</li>
+                            <li>Ochutnejte sherry v Jerezu nebo minimálně fino k tapas</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Počasí &amp; výbava</h4>
+                        <ul>
+                            <li>Únor/březen: 16–22 °C, chladnější večery – vrstvy!</li>
+                            <li>Pohodlné boty do města i hor (Ronda, bílá města)</li>
+                            <li>Sluneční brýle &amp; SPF – ostré jarní slunce</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Zážitek navíc</h4>
+                        <ul>
+                            <li>Flamenco show v Sacromonte nebo Triana</li>
+                            <li>Výlet do Caminito del Rey při cestě z Rondy</li>
+                            <li>Západ slunce na střeše hotelu Molina Lario</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p><span>¡Buen viaje!</span> Andalusie vás přivítá barvami, chutěmi a rytmem flamenca.</p>
+        </footer>
     </div>
-    <div class="content">
-
-      <div class="day">
-        <h2>25.2. Pátek – Přílet do Malagy</h2>
-        <div class="day-subtitle">Odlet z Bratislavy 16:20, přílet v Malaze 19:55</div>
-        <ul class="activities">
-          <li>Přílet na letiště Malaga Aeropuerto v 19:55</li>
-          <li>Pronájem auta v terminálu (cca 30 minut)</li>
-          <li>Přejezd do centra Malagy (cca 15 minut)</li>
-          <li>Check-in v hotelu</li>
-          <li>Lehká večeře v restauraci El Pimpi</li>
-          <li>Krátká procházka kolem hotelového centra</li>
-          <li>Včasný nástup – zítřevní den bude dlouhý</li>
-        </ul>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Malaga – noc 25.2.</div>
-          <div class="accommodation-details">
-            <div><strong>Hotel Molina Lario</strong> – luxusní hotel s výhledem na přístav</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>26.2. Sobota – Granada: Alhambra a historické centrum</h2>
-        <div class="day-subtitle">Přejezd z Malagy do Granady (120 km, cca 1,5 hodiny)</div>
-        <ul class="activities">
-          <li>Časná snídaně v hotelu</li>
-          <li>Přejezd do Granady</li>
-          <li>Dopoledne: Prohlídka Alhambry – jedné z nejkrásnějších islámských staveb v Evropě</li>
-          <li>Návštěva Generalife – královské zahrady přímo součástí areálu</li>
-          <li>Návštěva Nasrid Palaces – mohutnými mozaikami zdobené paláce</li>
-          <li>Oběd v tradiční restauraci v centru Granady</li>
-          <li>Odpoledne: Mirador de San Nicolás – panoramatický výhled na celou Granadu a Sierra Neváda</li>
-          <li>Procházka čtvrtí Camino del Sacromonte – původní romská čtvrť s tradicí flamenka</li>
-          <li>Návštěva autentické restaurace s flamenco a tancem</li>
-        </ul>
-        <div class="meal">
-          <div class="meal-title">Tipy na restaurace Granady</div>
-          <div class="restaurant"><strong>Bodegas Castañeda</strong> – tradiční tapas a víno</div>
-          <div class="restaurant"><strong>Mirador de Morayma</strong> – tapas s výhledem na Alhambru</div>
-        </div>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Granada – noc 26.2.</div>
-          <div class="accommodation-details">
-            <div><strong>Hotel Casa 1800 Granada</strong> – historický hotel v srdci města</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>27.2. Neděle – Cordóba: Mezquita a historické centrum</h2>
-        <div class="day-subtitle">Přejezd z Granady do Cordóby (165 km, cca 2 hodiny)</div>
-        <ul class="activities">
-          <li>Snídaně v hotelu a přejezd do Cordóby</li>
-          <li>Prohlídka Mezquity – nejstarší islámská svatyně v Evropě, nádherná islámská architektura</li>
-          <li>Návštěva Palacio de la Merced – historický palác v centru</li>
-          <li>Prohlídka Římského mostu – legenda v architektuře přes řeku Guadalquivir</li>
-          <li>Procházka po Plaza de la Corredera – staré náměstí se stylovou atmosférou</li>
-          <li>Oběd v tradiční taverně</li>
-          <li>Odpoledne: Navštívení Alcázar de los Reyes Cristianos – středověký hrad s úchvatným výhledem</li>
-          <li>Návštěva Palacio de Viana – aristokratické sídlo s krásným interiérem</li>
-          <li>Večer: Tradicionalní zápasy s býky v arényně (pokud jste si rezervovali vstupenky)</li>
-        </ul>
-        <div class="meal">
-          <div class="meal-title">Doporučené restaurace v Cordóbě</div>
-          <div class="restaurant"><strong>Taberna Luque</strong> – pravá andaluská kuchyně</div>
-          <div class="restaurant"><strong>Bodegas Campos</strong> – atmosféra a skvělé jídlo</div>
-        </div>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Cordóba – noc 27.2.</div>
-          <div class="accommodation-details">
-            <div><strong>Balcon de Cordoba</strong> – tradiční andaluský hotel v historickém centru</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>28.2. Pondělí – Sevilla: Katedrála, Alcázar a Santa Cruz</h2>
-        <div class="day-subtitle">Přejezd z Cordóby do Sevilly (135 km, cca 2 hodiny)</div>
-        <ul class="activities">
-          <li>Snídaně a přejezd do Sevilly</li>
-          <li>Prohlídka Catedral de Sevilly – třetí největší chrám v Evropě</li>
-          <li>Výstup do věže Giraldy (94 metrů) pro panoramatický výhled na město</li>
-          <li>Prohlídka Real Alcázaru – nádherný středověký palác s exotickými zahradami</li>
-          <li>Procházka čtvrtí Santa Cruz – starou židovskou čtvrtí s úzkými uličkami a starým kouzlem</li>
-          <li>Oběd v tradiční restauraci s příchutí Andalusie</li>
-          <li>Odpoledne: Plaza de España – monumentální náměstí se speciálním charakterem</li>
-          <li>Návštěva Las Setas – moderní dřevěné konstrukce se skvělým výhledem a restaurací</li>
-          <li>Návštěva Torre del Oro – středověké věže u řeky</li>
-          <li>Večer: Noční plavba po řece Guadalquivir (cca 1 hodina za cca 20 EUR)</li>
-        </ul>
-        <div class="meal">
-          <div class="meal-title">Tipy na restaurace v Seville</div>
-          <div class="restaurant"><strong>El Rinconcillo</strong> – nejstarší tapas bar (od roku 1670)</div>
-          <div class="restaurant"><strong>La Azotea</strong> – moderní tapas s andaluskými víny</div>
-        </div>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Sevilla – noc 28.2.</div>
-          <div class="accommodation-details">
-            <div><strong>Hotel Alfonso XIII Sevilla</strong> – historický luxusní palác</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>1.3. Úterý – Cádiz, Tarifa a Gibraltar: Jih Evropy</h2>
-        <div class="day-subtitle">Přejezd ze Sevilly přes Cádiz a Tarifa do Gibraltaru (cca 3,5 hodiny)</div>
-        <ul class="activities">
-          <li>Snídaně a přejezd ze Sevilly</li>
-          <li>Krátká zastávka v Cádizu (nejstarší město Evropy) – procházka kolem Torre del Oro a staré části</li>
-          <li>Oběd v Tarife – nejjižnější bod Evropy, výhled na Africku a Gibraltarský průliv</li>
-          <li>Návštěva Isla de Tarifa – ostrov na hranici Atlantiku a Středozemního moře</li>
-          <li>Procesí do Gibraltaru (cca 45 minut)</li>
-          <li>Příjezd do Gibraltaru – britské území</li>
-          <li>Večer: Relaxace a procházka Main Street</li>
-        </ul>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Gibraltar – noc 1.3.</div>
-          <div class="accommodation-details">
-            <div><strong>The Sunborn Yacht Hotel</strong> – luxusní jachta-hotel v přístavu</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>2.3. Středa – Gibraltar: Celodenní program</h2>
-        <div class="day-subtitle">Celý den v Gibraltaru – důkladná prohlídka</div>
-        <ul class="activities">
-          <li>Časná snídaně</li>
-          <li>Jízda na lanovce na vrchol Rock of Gibraltar – výhled na Gibraltarský průliv, Afriku a Atlantik</li>
-          <li>Procházka přes Windsor Suspension Bridge – závěsný most vysoko nad zemí</li>
-          <li>Pozorování Barbary Macaques – jediných divokých opic v Evropě</li>
-          <li>Návštěva Saint Michael's Cave – obrovská jeskyně s stalaktity a stalagmity</li>
-          <li>Oběd v britském pubu se skvělým hamburgery (typicky anglický)</li>
-          <li>Návštěva Great Siege Tunnels – historické vojenské tunely z 18. století</li>
-          <li>Procházka po Main Street – nákupní třída s britskými obchody</li>
-          <li>Procházka přístavem</li>
-          <li>Večer s výhledem na Gibraltarský průliv a západ slunce</li>
-        </ul>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Gibraltar – noc 2.3.</div>
-          <div class="accommodation-details">
-            <div><strong>The Sunborn Yacht Hotel</strong> – luxusní jachta-hotel v přístavu</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>3.3. Čtvrtek – Ronda: Město nad propastí</h2>
-        <div class="day-subtitle">Přejezd z Gibraltaru do Rondy (cca 2,5 hodiny)</div>
-        <ul class="activities">
-          <li>Snídaně a přejezd do Rondy</li>
-          <li>Návštěva Mostu Puente Nuevo – ikonické stavby, která spojuje dvě části města nad propastí El Tajo</li>
-          <li>Procházka po okraji propasti s nezapomenutelnými výhledy</li>
-          <li>Oběd v tradiční taverně s výhledem do údolí (specialita: ibérská šunka a místní sýr)</li>
-          <li>Odpoledne: Procházka historickými úzkými ulicemi středního města</li>
-          <li>Návštěva muzea býčích zápasů (je-li otevřeno)</li>
-          <li>Volný čas na fotografování a průzkum</li>
-          <li>Večer v tradiční restauraci</li>
-        </ul>
-        <div class="accommodation">
-          <div class="accommodation-title">Ubytování Ronda – noc 3.3.</div>
-          <div class="accommodation-details">
-            <div><strong>Hotel Ronda</strong> – boutique hotel v historickém centru s výhledy na dolinu</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="day">
-        <h2>4.3. Pátek – Přejezd z Rondy do Malagy a odlet</h2>
-        <div class="day-subtitle">Přejezd z Rondy do Malagy (cca 1,5 hodiny), odlet 20:40</div>
-        <ul class="activities">
-          <li>Snídaně a přejezd do Malagy</li>
-          <li>Příjezd do Malagy s časem na relax</li>
-          <li>Oběd na Mercado central de Ataranzas – tradiční tržnici</li>
-          <li>Procházka po přístavním městě, poslední nákupy suvenýrů</li>
-          <li>Přejezd na letiště</li>
-          <li>Odlet v 20:40 z Malagy do Bratislavy</li>
-        </ul>
-      </div>
-
-      <div class="tips">
-        <h3>Obecné tipy a doporučení</h3>
-        <ul>
-          <li>Pronájem auta je absolutně nezbytný pro přesuny mezi městy</li>
-          <li>Vstupy do Alhambry – NUTNÉ rezervovat s velkým předstihem</li>
-          <li>Restaurace – doporučuji rezervovat hlavně ve velkých městech</li>
-          <li>Zápasy s býky v Cordóbě – vstupenky se prodávají rychle</li>
-          <li>Tapas, jamón ibérico (ibérská šunka), gazpacho (studená polévka)</li>
-          <li>Sherryho vína z Jerezu – ideální k tapas</li>
-          <li>V Gibraltaru si vezměte pas – je britské území</li>
-          <li>Měna v Gibraltaru – libry, ale obchody často přijímají i eura</li>
-          <li>Únor/březen – ideální počasí, slunečné dny bez extrémního tepla</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer">
-      <p>&copy; 2026 | Andalusie 25.2.–4.3. | Skupina 36–37 let</p>
-    </div>
-  </div>
 </body>
 </html>

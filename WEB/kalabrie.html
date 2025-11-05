@@ -1,611 +1,333 @@
-<title>🗺️ Itinerář Kalábrie – 14–17. listopadu</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        .day {
-            margin-bottom: 50px;
-            border-left: 5px solid #667eea;
-            padding-left: 20px;
-        }
-        
-        .day h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        
-        .day-subtitle {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        
-        th {
-            background: #f0f0f0;
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid #667eea;
-        }
-        
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        tr:hover {
-            background: #f9f9f9;
-        }
-        
-        .time {
-            font-weight: 600;
-            color: #667eea;
-            min-width: 80px;
-        }
-        
-        .place {
-            font-weight: 600;
-            color: #764ba2;
-        }
-        
-        .meal {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border-left: 4px solid #ffc107;
-        }
-        
-        .meal-title {
-            font-weight: 600;
-            color: #856404;
-        }
-        
-        .restaurant {
-            margin-left: 10px;
-            font-size: 0.95em;
-            color: #333;
-        }
-        
-        .optional {
-            background: #e7f3ff;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #2196F3;
-            margin: 15px 0;
-        }
-        
-        .optional-title {
-            font-weight: 600;
-            color: #0d47a1;
-        }
-        
-        .accommodation {
-            background: #f0f9ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #00bcd4;
-        }
-        
-        .accommodation-title {
-            font-weight: 600;
-            color: #00695c;
-            margin-bottom: 8px;
-        }
-        
-        .accommodation-details {
-            font-size: 0.9em;
-            color: #333;
-            margin-left: 10px;
-        }
-        
-        .accommodation-details div {
-            margin: 5px 0;
-        }
-        
-        .tips {
-            background: #f0f9ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        
-        .tips h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-        
-        .tips ul {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .tips li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .tips li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .footer {
-            background: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
-        }
-        
-        .emoji {
-            margin-right: 5px;
-        }
-        
-        .rating {
-            color: #ffc107;
-            font-weight: 600;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            table {
-                font-size: 0.9em;
-            }
-            
-            td, th {
-                padding: 8px;
-            }
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🗺️ Itinerář Kalábrie – 14.–17. listopadu 2025</title>
+    <link rel="stylesheet" href="assets/travel.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🗺️ ITINERÁŘ KALÁBRIE</h1>
-            <p>14.–17. listopadu 2025 | 2 manželské páry</p>
-        </div>
-        
-        <div class="content">
-            <!-- PÁTEK -->
-            <div class="day">
-                <h2>📅 Pátek 14. listopadu – Přílet</h2>
-                <div class="day-subtitle">Lamezia Terme</div>
-                
-                <table>
-                    <tr>
-                        <td class="time">Odpoledne</td>
-                        <td class="place">Lamezia Terme</td>
-                        <td><span class="emoji">💨</span>Přílet</td>
-                    </tr>
-                    <tr>
-                        <td class="time">Večer</td>
-                        <td class="place">Agriturismo Costantino</td>
-                        <td><span class="emoji">🛏️</span>Ubytování, večeře, relax</td>
-                    </tr>
-                </table>
+    <div class="travel-container">
+        <header class="hero">
+            <h1>Itinerář Kalábrie</h1>
+            <p>14.–17. listopadu 2025 · 2 manželské páry</p>
+            <div class="meta">
+                <span>🚗 Roadtrip pobřeží &amp; hory</span>
+                <span>🍽️ Gourmet zastávky</span>
+                <span>🍷 Degustace vína Cirò</span>
             </div>
-            
-            <!-- SOBOTA -->
-            <div class="day">
-                <h2>📅 Sobota 15. listopadu – Vnitrozemí</h2>
-                <div class="day-subtitle">Costantino → Cosenza → Camigliatello Silano → San Giovanni in Fiore → Santa Severina → Cirò Marina</div>
-                
-                <table>
-                    <tr>
-                        <th style="width: 80px;">Čas</th>
-                        <th style="width: 150px;">Místo</th>
-                        <th>Aktivita</th>
-                    </tr>
-                    <tr>
-                        <td class="time">08:30</td>
-                        <td class="place">Agriturismo</td>
-                        <td>Odjezd</td>
-                    </tr>
-                    <tr>
-                        <td class="time">09:30</td>
-                        <td class="place">Cosenza</td>
-                        <td>Příjezd do města</td>
-                    </tr>
-                    <tr>
-                        <td class="time">10:00–10:30</td>
-                        <td class="place">Cosenza</td>
-                        <td><span class="emoji">🚶</span>Procházka – Duomo, Corso Telesio</td>
-                    </tr>
-                    <tr>
-                        <td class="time">11:30</td>
-                        <td class="place">Camigliatello</td>
-                        <td>Příjezd do hor</td>
-                    </tr>
-                    <tr>
-                        <td class="time">12:00–13:30</td>
-                        <td class="place">Camigliatello</td>
-                        <td>
-                            <div class="meal">
-                                <div class="meal-title"><span class="emoji">🍽️</span>OBĚD – VYBRAT JEDNU:</div>
-                                <div class="restaurant">⭐ <strong>Mercato Silano – Arturo Falcone</strong> (maso 🥩)</div>
-                                <div class="restaurant">• Sorelle Falcone (těstoviny)</div>
-                                <div class="restaurant">• Ristorante I Ventura (zvěřina)</div>
-                                <div class="restaurant">• La Vecchia Stazione (grilovaná jídla)</div>
-                                <div class="restaurant">• Binario 37 (moderní)</div>
-                                <div class="restaurant" style="margin-top: 10px; font-size: 0.85em; color: #666;"><strong>Tip:</strong> Zaměřit se na horskou kuchyni – lanýže, hříbky, sýry ze Sily</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">13:30–14:15</td>
-                        <td class="place">Camigliatello</td>
-                        <td><span class="emoji">🏪</span>Nákup lokálních produktů</td>
-                    </tr>
-                    <tr>
-                        <td class="time">14:15</td>
-                        <td class="place">San Giovanni in Fiore</td>
-                        <td>Příjezd</td>
-                    </tr>
-                    <tr>
-                        <td class="time">14:45–15:30</td>
-                        <td class="place">San Giovanni in Fiore</td>
-                        <td><span class="emoji">⛪</span>Klášter Florense + ochutnávka <span class="emoji">🍯</span>pitta 'mpigliata</td>
-                    </tr>
-                    <tr>
-                        <td class="time">16:15</td>
-                        <td class="place">Santa Severina</td>
-                        <td>Odjezd</td>
-                    </tr>
-                    <tr>
-                        <td class="time">17:00–17:30</td>
-                        <td class="place">Santa Severina</td>
-                        <td><span class="emoji">🏰</span>Prohlídka hradu a centra</td>
-                    </tr>
-                    <tr>
-                        <td class="time">17:30</td>
-                        <td class="place">Cirò Marina</td>
-                        <td>Příjezd do vinařského městečka</td>
-                    </tr>
-                    <tr>
-                        <td class="time">18:00–19:00</td>
-                        <td class="place">Cantina F.lli</td>
-                        <td><span class="emoji">🍷</span><strong>DEGUSTACE VÍNA</strong><br><small>⚠️ NUTNÁ REZERVACE!</small></td>
-                    </tr>
-                    <tr>
-                        <td class="time">19:15–20:30</td>
-                        <td class="place">Trattoria Max</td>
-                        <td><span class="emoji">🍴</span>Večeře</td>
-                    </tr>
-                    <tr>
-                        <td class="time">20:45+</td>
-                        <td class="place">A Casalura</td>
-                        <td><span class="emoji">🍷</span>Posezení u vína</td>
-                    </tr>
+        </header>
+
+        <main class="content">
+            <section class="day">
+                <span class="section-label">Pátek 14. listopadu</span>
+                <h2>Přílet do Kalábrie</h2>
+                <div class="day-subtitle">Lamezia Terme · Agriturismo Costantino</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">Odpoledne</td>
+                            <td class="place">Lamezia Terme</td>
+                            <td>✈️ Přílet do Kalábrie</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Večer</td>
+                            <td class="place">Agriturismo Costantino</td>
+                            <td>🛏️ Ubytování · večeře · relax ve wellness</td>
+                        </tr>
+                    </tbody>
                 </table>
-                
-                <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #4caf50;">
-                    <strong style="color: #1b5e20;">🛏️ UBYTOVÁNÍ V CIRÒ MARINA (VYBRAT JEDNU):</strong>
-                    
-                    <div class="accommodation" style="margin-top: 15px;">
-                        <div class="accommodation-title">1. Villa Vittoria B&B ⭐⭐⭐</div>
-                        <div class="accommodation-details">
-                            <div><strong>Hodnocení:</strong> Vysoce hodnoceno hosty</div>
-                            <div><strong>Kapacita:</strong> 4 hosté (2 pokoje)</div>
-                            <div><strong>Vybavení:</strong> Venkovní bazén (sezónní), zahrada, terasa, WiFi zdarma, parkování zdarma</div>
-                            <div><strong>Cena:</strong> Od ~106 USD/noc (2 pokoje)</div>
-                            <div><strong>Lokace:</strong> Madonna di Mare, 3 km od centra Cirò Marina</div>
-                            <div><strong>📱 Booking:</strong> https://www.booking.com/hotel/it/villa-vittoria-b-amp-b.html</div>
-                        </div>
-                    </div>
-                    
-                    <div class="accommodation">
-                        <div class="accommodation-title">2. Carmen House ⭐⭐⭐⭐ (DOPORUČENO)</div>
-                        <div class="accommodation-details">
-                            <div><strong>Hodnocení:</strong> 9.4/10 (19+ recenzí) – vynikající!</div>
-                            <div><strong>Kapacita:</strong> 4–5 hostů (2 ložnice, 2 koupelny)</div>
-                            <div><strong>Vybavení:</strong> Balkon s výhledem na hory, klimatizace, WiFi zdarma, kuchyň</div>
-                            <div><strong>Cena:</strong> Od ~80–100 EUR/noc</div>
-                            <div><strong>Lokace:</strong> 700 m od centra Cirò Marina – pěšky 10 minut</div>
-                            <div><strong>Check-in/out:</strong> 15:00–18:00 / do 11:00</div>
-                            <div><strong>Extra:</strong> Shuttle k pláži (za poplatek)</div>
-                            <div><strong>📱 Booking:</strong> https://www.booking.com/hotel/it/carmen-house3.html</div>
-                        </div>
-                    </div>
-                    
-                    <div class="accommodation">
-                        <div class="accommodation-title">3. Casale degli Ulivi ⭐⭐⭐⭐ – Luxe</div>
-                        <div class="accommodation-details">
-                            <div><strong>Hodnocení:</strong> 9.1–10/10 (42+ recenzí) – výjimečné!</div>
-                            <div><strong>Kapacita:</strong> 8–10 hostů (6 ložnic) – skupinová volba</div>
-                            <div><strong>Vybavení:</strong> B&B s RESTAURACÍ na místě! Zahrada, terasa, WiFi zdarma, parkování</div>
-                            <div><strong>Speciální:</strong> 🍴 Snídaně à la carte + večeře v restauraci na místě (místní kuchyně, mořské plody)</div>
-                            <div><strong>Cena:</strong> Od ~90 EUR/noc (luxusní pokoj s výhledem)</div>
-                            <div><strong>Lokace:</strong> 30 km od Capo Colonna, v přírodě</div>
-                            <div><strong>Check-in/out:</strong> 14:00–půlnoc / do 10:00</div>
-                            <div><strong>💡 Tip:</strong> Perfektní pro skupinu – máte restauraci přímo na místě!</div>
-                            <div><strong>📱 Booking:</strong> https://www.booking.com/hotel/it/casale-degli-ulivi-ciro-marina.html</div>
-                        </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Sobota 15. listopadu</span>
+                <h2>Kalábrijské vnitrozemí</h2>
+                <div class="day-subtitle">Costantino → Cosenza → Camigliatello Silano → San Giovanni in Fiore → Santa Severina → Cirò Marina</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">08:30</td>
+                            <td class="place">Agriturismo</td>
+                            <td>🚗 Odjezd do vnitrozemí</td>
+                        </tr>
+                        <tr>
+                            <td class="time">09:30</td>
+                            <td class="place">Cosenza</td>
+                            <td>Procházka historickým centrem · Duomo · Corso Telesio</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:30</td>
+                            <td class="place">Camigliatello Silano</td>
+                            <td>Příjezd do hor · atmosféra národního parku Sila</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:00–13:30</td>
+                            <td class="place">Camigliatello</td>
+                            <td>
+                                <div class="meal">
+                                    <div class="meal-title">🍽️ Oběd – horská kuchyně</div>
+                                    <div class="restaurant">⭐ Mercato Silano – Arturo Falcone (maso &amp; lanýže)</div>
+                                    <div class="restaurant">Sorelle Falcone (těstoviny)</div>
+                                    <div class="restaurant">Ristorante I Ventura (zvěřina)</div>
+                                    <div class="restaurant">La Vecchia Stazione (gril)</div>
+                                    <div class="restaurant">Binario 37 (moderní twist)</div>
+                                    <div class="restaurant">💡 Zaměřte se na speciality Sila – lanýže, hříbky, horské sýry</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">13:30–14:15</td>
+                            <td class="place">Camigliatello</td>
+                            <td>🛍️ Nákup lokálních produktů</td>
+                        </tr>
+                        <tr>
+                            <td class="time">14:45</td>
+                            <td class="place">San Giovanni in Fiore</td>
+                            <td>Klášter Florense · ochutnávka pitta 'mpigliata</td>
+                        </tr>
+                        <tr>
+                            <td class="time">17:00</td>
+                            <td class="place">Santa Severina</td>
+                            <td>🏰 Prohlídka hradu a historického centra</td>
+                        </tr>
+                        <tr>
+                            <td class="time">18:00</td>
+                            <td class="place">Cirò Marina</td>
+                            <td>Příjezd do vinařského městečka</td>
+                        </tr>
+                        <tr>
+                            <td class="time">18:00–19:00</td>
+                            <td class="place">Cantina F.lli Dell'Aquila</td>
+                            <td>🍷 Degustace vín (nutná rezervace)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">19:15–20:30</td>
+                            <td class="place">Trattoria Max</td>
+                            <td>Večeře – mořské plody a lokální kuchyně</td>
+                        </tr>
+                        <tr>
+                            <td class="time">20:45+</td>
+                            <td class="place">A Casalura</td>
+                            <td>Večerní posezení u vína</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="accommodation">
+                    <div class="accommodation-title">🛏️ Ubytování Cirò Marina – vyberte jednu možnost</div>
+                    <div class="accommodation-details">
+                        <div><strong>Villa Vittoria B&amp;B ⭐⭐⭐</strong> · bazén, zahrada, 3 km od centra · ~106 USD/noc (2 pokoje)</div>
+                        <div><strong>Carmen House ⭐⭐⭐⭐</strong> · 2 ložnice · 9.4/10 · balkon s výhledem · 700 m od centra · ~80–100 EUR/noc</div>
+                        <div><strong>Casale degli Ulivi ⭐⭐⭐⭐</strong> · B&amp;B s restaurací · snídaně à la carte · ideální pro skupiny</div>
                     </div>
                 </div>
-                
-                <p style="text-align: center; font-weight: 600; margin-top: 15px;"><span class="emoji">🛏️</span>PŘESPÁNÍ V CIRÒ MARINA</p>
-            </div>
-            
-            <!-- NEDĚLE -->
-            <div class="day">
-                <h2>📅 Neděle 16. listopadu – Pobřeží & Hory</h2>
-                <div class="day-subtitle">Cirò → Crotone → La Castella → San Floro → [Volitelně: Stilo] → Serra San Bruno</div>
-                
-                <table>
-                    <tr>
-                        <th style="width: 80px;">Čas</th>
-                        <th style="width: 150px;">Místo</th>
-                        <th>Aktivita</th>
-                    </tr>
-                    <tr>
-                        <td class="time">08:30</td>
-                        <td class="place">Cirò</td>
-                        <td><span class="emoji">🚶</span>Procházka centra</td>
-                    </tr>
-                    <tr>
-                        <td class="time">09:30</td>
-                        <td class="place">Crotone</td>
-                        <td>Příjezd do historického města</td>
-                    </tr>
-                    <tr>
-                        <td class="time">10:00–11:00</td>
-                        <td class="place">Crotone</td>
-                        <td><span class="emoji">⛪</span>Kostely: San Domenico, Cattedrale, Chiesa di San Francesco</td>
-                    </tr>
-                    <tr>
-                        <td class="time">11:15–12:30</td>
-                        <td class="place">Capo Colonna</td>
-                        <td><span class="emoji">🏛️</span><strong>Archaeological Park</strong> – chrám Hery (6. stol. BC) + moře</td>
-                    </tr>
-                    <tr>
-                        <td class="time">12:30–14:00</td>
-                        <td class="place">La Castella</td>
-                        <td>
-                            <div class="meal">
-                                <div class="meal-title"><span class="emoji">🏰</span>OBĚD + HRAD</div>
-                                <div class="restaurant"><strong>Trattoria La Bussola</strong> – kalábrijská kuchyně u moře</div>
-                                <div class="restaurant" style="margin-top: 10px;">Po obědě: Prohlídka <strong>hradu La Castella</strong></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">14:00–15:00</td>
-                        <td class="place">San Floro</td>
-                        <td>
-                            <div class="meal">
-                                <div class="meal-title"><span class="emoji">🎀</span>HEDVÁBNÁ MANUFAKTURA</div>
-                                <div class="restaurant"><strong>Nido di Seta</strong> – chov bource morušového</div>
-                                <div class="restaurant">Nákup marmelád & hedvábných produktů</div>
-                                <div class="restaurant"><strong>⚠️ NUTNÁ REZERVACE!</strong></div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">15:30–17:00</td>
-                        <td colspan="2">
-                            <div class="optional">
-                                <div class="optional-title"><span class="emoji">⚠️</span>VOLITELNĚ: STILO</div>
-                                <div style="margin-top: 10px;">
-                                    <strong>Cattolica di Stilo</strong> – byzantský kostel (9.–10. stol.)<br>
-                                    5 červených kupol, kandidát na UNESCO<br>
-                                    <strong>Otevírací doba:</strong> 8:00–18:00 | <strong>Vstup:</strong> 3 € | <strong>Čas:</strong> 45–60 min<br>
-                                    <strong>Poznámka:</strong> +40 minut jízdy. Pokud chceš relax večer, vynech.
+            </section>
+
+            <section class="day">
+                <span class="section-label">Neděle 16. listopadu</span>
+                <h2>Pobřeží &amp; hory</h2>
+                <div class="day-subtitle">Cirò → Crotone → La Castella → San Floro → (volitelně Stilo) → Serra San Bruno</div>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">08:30</td>
+                            <td class="place">Cirò</td>
+                            <td>Procházka centrem</td>
+                        </tr>
+                        <tr>
+                            <td class="time">09:30</td>
+                            <td class="place">Crotone</td>
+                            <td>Návštěva historického města</td>
+                        </tr>
+                        <tr>
+                            <td class="time">10:00–11:00</td>
+                            <td class="place">Crotone</td>
+                            <td>⛪ San Domenico · Cattedrale · Chiesa di San Francesco</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:15–12:30</td>
+                            <td class="place">Capo Colonna</td>
+                            <td>🏛️ Archaeological Park · chrám Hery · pobřežní výhledy</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:30–14:00</td>
+                            <td class="place">La Castella</td>
+                            <td>
+                                <div class="meal">
+                                    <div class="meal-title">🏰 Oběd &amp; hrad</div>
+                                    <div class="restaurant"><strong>Trattoria La Bussola</strong> – kalábrijská kuchyně u moře</div>
+                                    <div class="restaurant">Po obědě: prohlídka hradu La Castella</div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">16:30<br>(bez Stila)<br><br>17:30<br>(se Stilem)</td>
-                        <td class="place">Serra San Bruno</td>
-                        <td>Příjezd do horského města</td>
-                    </tr>
-                    <tr>
-                        <td class="time">Do 18:00</td>
-                        <td class="place">Serra San Bruno</td>
-                        <td><span class="emoji">⛪</span><strong>Klášter Certosa</strong><br><small>Otevírací doba: 10:00–13:00, 15:00–18:00</small></td>
-                    </tr>
-                    <tr>
-                        <td class="time">19:00–20:30</td>
-                        <td class="place">Serra San Bruno</td>
-                        <td>
-                            <div class="meal">
-                                <div class="meal-title"><span class="emoji">🍽️</span>VEČEŘE – VYBRAT JEDNU:</div>
-                                <div class="restaurant">⭐⭐⭐⭐⭐ <strong>Zenzero</strong> – mořské plody, gnocchi</div>
-                                <div class="restaurant">⭐⭐⭐⭐⭐ <strong>The Beefeater's</strong> – steakhouse</div>
-                                <div class="restaurant">• La Cascina Del Monastero (u kláštera)</div>
-                                <div class="restaurant">• Ristorante Pizzeria Delle Serre (pizza)</div>
-                            </div>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">15:00</td>
+                            <td class="place">San Floro</td>
+                            <td>Návštěva manufaktury <strong>Nido di Seta</strong> (hedvábí) · nutná rezervace</td>
+                        </tr>
+                        <tr>
+                            <td class="time">17:30</td>
+                            <td class="place">Serra San Bruno</td>
+                            <td>Večerní příjezd · procházka historickým centrem</td>
+                        </tr>
+                    </tbody>
                 </table>
-                
-                <p style="text-align: center; font-weight: 600; margin-top: 15px;"><span class="emoji">🛏️</span>PŘESPÁNÍ V SERRA SAN BRUNO</p>
-            </div>
-            
-            <!-- PONDĚLÍ -->
-            <div class="day">
-                <h2>📅 Pondělí 17. listopadu – Pobřeží & Návrat</h2>
+
+                <div class="optional">
+                    <div class="optional-title">💡 Volitelné: Stilo</div>
+                    <div class="restaurant">Zvažte zastávku cestou – byzantský kostel Cattolica a panoramata.</div>
+                </div>
+            </section>
+
+            <section class="day">
+                <span class="section-label">Pondělí 17. listopadu</span>
+                <h2>Pobřeží božských výhledů</h2>
                 <div class="day-subtitle">Serra San Bruno → Capo Vaticano → Tropea → Pizzo → Lamezia Terme</div>
-                
-                <table>
-                    <tr>
-                        <th style="width: 80px;">Čas</th>
-                        <th style="width: 150px;">Místo</th>
-                        <th>Aktivita</th>
-                    </tr>
-                    <tr>
-                        <td class="time">08:30</td>
-                        <td class="place">Serra San Bruno</td>
-                        <td><span class="emoji">🚗</span>Odjezd (1 h k moři)</td>
-                    </tr>
-                    <tr>
-                        <td class="time">09:30–10:30</td>
-                        <td class="place">Capo Vaticano</td>
-                        <td><span class="emoji">🌊</span><strong>Belvedere del Faro</strong> – výhledy, Stromboli, Sicílie</td>
-                    </tr>
-                    <tr>
-                        <td class="time">10:50</td>
-                        <td class="place">Tropea</td>
-                        <td>Příjezd do pohádkového města</td>
-                    </tr>
-                    <tr>
-                        <td class="time">11:00–11:30</td>
-                        <td class="place">Tropea</td>
-                        <td><span class="emoji">⛪</span>Kostel Santa Maria dell'Isola (na skále)<br><span class="emoji">🚶</span>Procházka centra</td>
-                    </tr>
-                    <tr>
-                        <td class="time">11:30</td>
-                        <td class="place">Tropea</td>
-                        <td><span class="emoji">🍨</span>Zmrzlina v Gelati Tonino</td>
-                    </tr>
-                    <tr>
-                        <td class="time">12:00–13:30</td>
-                        <td class="place">Tropea</td>
-                        <td>
-                            <div class="meal">
-                                <div class="meal-title"><span class="emoji">🍽️</span>OBĚD – VYBRAT JEDNU:</div>
-                                <div class="restaurant">⭐⭐⭐⭐⭐ <strong>Diamante Rosso</strong></div>
-                                <div class="restaurant">• Incipit Restaurant (moderní)</div>
-                                <div class="restaurant">• Ristorante la Conchiglia da Patea</div>
-                                <div class="restaurant">• BO.CA – Bottega Calabra</div>
-                                <div class="restaurant">• Marasusa Bistrot</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">13:45</td>
-                        <td class="place">Pizzo</td>
-                        <td><span class="emoji">🚗</span>Odjezd (20 minut)</td>
-                    </tr>
-                    <tr>
-                        <td class="time">14:00–14:45</td>
-                        <td class="place">Pizzo</td>
-                        <td><span class="emoji">🏰</span>Castello Murat (9:00–13:00, 15:00–19:00)<br><span class="emoji">⛪</span>Kostel Piedigrotta</td>
-                    </tr>
-                    <tr>
-                        <td class="time">14:45</td>
-                        <td class="place">Pizzo</td>
-                        <td>
-                            <div class="meal">
-                                <div class="meal-title"><span class="emoji">🍨</span>TARTUFO DI PIZZO</div>
-                                <div class="restaurant"><strong>Gelateria Ercole</strong> (od 1965)</div>
-                                <div class="restaurant" style="font-size: 0.85em;">🤎 Gelato s lískovou moučkou, kakaem & fondánem</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">16:00–17:00</td>
-                        <td class="place">Due Mari</td>
-                        <td><span class="emoji">🛍️</span><strong>POSLEDNÍ NÁKUPY</strong><br>OVS, Scarpe & Scarpe, Ipercoop</td>
-                    </tr>
-                    <tr>
-                        <td class="time">17:00</td>
-                        <td class="place">Lamezia Terme</td>
-                        <td><span class="emoji">🚗</span><strong>Vrácení auta</strong></td>
-                    </tr>
+                <table class="itinerary-table">
+                    <thead>
+                        <tr>
+                            <th>Čas</th>
+                            <th>Místo</th>
+                            <th>Aktivita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">08:30</td>
+                            <td class="place">Serra San Bruno</td>
+                            <td>Odjezd k moři (cca 1 hodina)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">09:30–10:30</td>
+                            <td class="place">Capo Vaticano</td>
+                            <td>🌊 Belvedere del Faro · výhledy na Stromboli &amp; Sicílii</td>
+                        </tr>
+                        <tr>
+                            <td class="time">10:50</td>
+                            <td class="place">Tropea</td>
+                            <td>Příjezd do Tropey</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:00–11:30</td>
+                            <td class="place">Tropea</td>
+                            <td>⛪ Santa Maria dell'Isola · procházka středověkým centrem</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:30</td>
+                            <td class="place">Tropea</td>
+                            <td>🍨 Gelato v Gelati Tonino</td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:00–13:30</td>
+                            <td class="place">Tropea</td>
+                            <td>
+                                <div class="meal">
+                                    <div class="meal-title">🍽️ Oběd – vyberte jednu restauraci</div>
+                                    <div class="restaurant">⭐⭐⭐⭐⭐ Diamante Rosso</div>
+                                    <div class="restaurant">Incipit Restaurant (moderní kuchyně)</div>
+                                    <div class="restaurant">Ristorante La Conchiglia da Patea</div>
+                                    <div class="restaurant">BO.CA – Bottega Calabra</div>
+                                    <div class="restaurant">Marasusa Bistrot</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">13:45</td>
+                            <td class="place">Pizzo</td>
+                            <td>🚗 Odjezd (20 minut)</td>
+                        </tr>
+                        <tr>
+                            <td class="time">14:00–14:45</td>
+                            <td class="place">Pizzo</td>
+                            <td>🏰 Castello Murat · 🕍 Kostel Piedigrotta</td>
+                        </tr>
+                        <tr>
+                            <td class="time">14:45</td>
+                            <td class="place">Pizzo</td>
+                            <td>
+                                <div class="meal">
+                                    <div class="meal-title">🍨 Tartufo di Pizzo</div>
+                                    <div class="restaurant"><strong>Gelateria Ercole</strong> (od 1965)</div>
+                                    <div class="restaurant">Lísková moučka · kakao · fondán</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">16:00–17:00</td>
+                            <td class="place">Centro Due Mari</td>
+                            <td>🛍️ Poslední nákupy · OVS · Scarpe &amp; Scarpe · Ipercoop</td>
+                        </tr>
+                        <tr>
+                            <td class="time">17:00</td>
+                            <td class="place">Lamezia Terme</td>
+                            <td>🚗 Vrácení auta a odlet</td>
+                        </tr>
+                    </tbody>
                 </table>
-            </div>
-            
-            <!-- TIPY -->
-            <div class="tips">
-                <h3>🎯 KLÍČOVÉ INFORMACE</h3>
-                
-                <h4 style="color: #667eea; margin-top: 20px; margin-bottom: 10px;">⚠️ Povinné rezervace:</h4>
-                <ul>
-                    <li><strong>Cirò Marina – Cantina F.lli Dell'Aquila</strong> (degustace vína)</li>
-                    <li><strong>San Floro – Nido di Seta</strong> (hedvábná manufaktura)</li>
-                </ul>
-                
-                <h4 style="color: #667eea; margin-top: 20px; margin-bottom: 10px;">📸 Nejlepší fotky:</h4>
-                <ul>
-                    <li><strong>Capo Vaticano</strong> – západ slunce</li>
-                    <li><strong>Tropea – Santa Maria dell'Isola</strong> – zlaté světlo (brzy ráno nebo odpoledne)</li>
-                    <li><strong>La Castella</strong> – hrad na skále</li>
-                </ul>
-                
-                <h4 style="color: #667eea; margin-top: 20px; margin-bottom: 10px;">🌡️ Počasí v listopadu:</h4>
-                <ul>
-                    <li>Teplota: 15–20°C</li>
-                    <li>Koupání: Ne (voda je studená)</li>
-                    <li>Oblečení: Přechodná bunda, pohodlné boty</li>
-                </ul>
-                
-                <h4 style="color: #667eea; margin-top: 20px; margin-bottom: 10px;">💡 Finální tip:</h4>
-                <ul>
-                    <li>Stilo můžeš rozhodnout <strong>operativně v neděli</strong> – máš obě varianty v itineráři</li>
-                    <li>V listopadu je méně turistů – ideální pro autentický zážitek</li>
-                    <li>Všechny procházky jsou lehké (1–2 km denně)</li>
-                    <li><strong>Carmen House doporučuji</strong> – nejlepší poměr cena/kvalita a nejblíž centru</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p><strong>🇮🇹 BUENA STRADA! Užij si Kalábrii! ✨</strong></p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Itinerář vytvořen: 24. října 2025</p>
-        </div>
+            </section>
+
+            <section class="tips">
+                <h3>🎯 Klíčové informace</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4>⚠️ Povinné rezervace</h4>
+                        <ul>
+                            <li>Cirò Marina – Cantina F.lli Dell'Aquila (degustace)</li>
+                            <li>San Floro – Nido di Seta (hedvábná manufaktura)</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>📸 Nejlepší fotolokace</h4>
+                        <ul>
+                            <li>Capo Vaticano – západ slunce</li>
+                            <li>Tropea – Santa Maria dell'Isola v zlaté hodince</li>
+                            <li>La Castella – hrad na skále</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🌡️ Počasí v listopadu</h4>
+                        <ul>
+                            <li>Teploty 15–20 °C · svěží večery</li>
+                            <li>Koupání spíše symbolické</li>
+                            <li>Přibalte přechodnou bundu a pohodlné boty</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <h4>💡 Bonusové tipy</h4>
+                        <ul>
+                            <li>Stilo lze zařadit operativně v neděli</li>
+                            <li>Listopad = minimum turistů, maximální autenticita</li>
+                            <li>Doporučené ubytování: Carmen House – nejlepší poměr cena/kvalita</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p><span>Buena strada!</span> Užijte si Kalábrii · itinerář připraven 24. října 2025</p>
+        </footer>
     </div>
 </body>
 </html>
