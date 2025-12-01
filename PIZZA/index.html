@@ -1,4 +1,4 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
@@ -6,54 +6,54 @@
     <title>🍕 Pizza Objednávky</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0. 1); }
         h1 { text-align: center; color: #d32f2f; margin-bottom: 30px; }
-        .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        input[type="file"], input[type="text"], input[type="number"] { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
-        button { background: #d32f2f; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 5px; }
+        .section { margin-bottom: 30px; }
+        .section h2 { color: #333; margin-bottom: 15px; border-bottom: 2px solid #d32f2f; padding-bottom: 10px; }
+        input, select { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1em; }
+        button { background: #d32f2f; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 5px; margin-bottom: 10px; }
         button:hover { background: #b71c1c; }
         .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
-        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 4px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #f5f5f5; font-weight: bold; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 4px; background: #f9f9f9; }
+        . product-card strong { display: block; margin-bottom: 10px; color: #333; }
+        . product-card small { color: #666; display: block; margin-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f5f5f5; font-weight: bold; color: #333; }
+        tr:hover { background: #f9f9f9; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🍕 Pizza Objednávky - Správa Surovin</h1>
 
-        <!-- Sekcí pro uživatele -->
         <div class="section">
-            <h2>Zadej své jméno:</h2>
-            <input type="text" id="userName" placeholder="Tvoje jméno">
+            <h2>Tvoje údaje</h2>
+            <input type="text" id="userName" placeholder="Tvoje jméno (povinné)">
         </div>
 
-        <!-- Sekce pro nahrávání CSV -->
         <div class="section">
             <h2>Nahraj seznam surovin (CSV)</h2>
             <input type="file" id="csvFile" accept=".csv">
-            <button onclick="loadCSV()">Nahrát CSV</button>
+            <button onclick="loadCSV()">📥 Nahrát CSV</button>
         </div>
 
-        <!-- Sekce s produkty -->
         <div class="section">
-            <h2>Dostupné produkty:</h2>
+            <h2>Dostupné produkty</h2>
             <div id="productsList" class="products"></div>
         </div>
 
-        <!-- Sekce s objednávkami -->
         <div class="section">
-            <h2>Objednávky:</h2>
+            <h2>Objednávky</h2>
             <div id="ordersList"></div>
         </div>
 
-        <!-- Sekce pro export -->
         <div class="section">
-            <h2>Export pro dodavatele:</h2>
-            <button onclick="generateExport()">Vytvořit export</button>
-            <button onclick="downloadCSV()">Stáhnout CSV</button>
+            <h2>Export pro dodavatele</h2>
+            <button onclick="generateExport()">🔄 Vytvořit export</button>
+            <button onclick="downloadCSV()">📥 Stáhnout CSV</button>
+            <button onclick="printExport()">🖨️ Tisk</button>
             <div id="exportTable"></div>
         </div>
     </div>
@@ -70,7 +70,7 @@
             appId: "1:684595838522:web:8c64b1481b2825c74d7f03"
         };
 
-        firebase. initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
 
         let products = [];
@@ -86,53 +86,62 @@
                 const lines = csv.split('\n');
                 products = [];
                 
-                lines. forEach(line => {
+                lines.forEach(line => {
                     if (line.trim()) {
                         const parts = line.split(',');
-                        products.push({
-                            code: parts[0],
-                            name: parts[1],
-                            brand: parts[2],
-                            packaging: parts[3],
-                            unit: parts[4] || 'ks'
-                        });
+                        if (parts[0]) {
+                            products.push({
+                                code: parts[0]. trim(),
+                                name: parts[1] ? parts[1].trim() : '',
+                                brand: parts[2] ? parts[2].trim() : '',
+                                packaging: parts[3] ? parts[3].trim() : '',
+                                unit: parts[4] ? parts[4].trim() : 'ks'
+                            });
+                        }
                     }
                 });
                 
                 displayProducts();
-                alert(`Nahráno ${products.length} produktů! `);
+                alert(`Nahráno ${products.length} produktů!`);
             };
             reader.readAsText(file);
         }
 
         function displayProducts() {
             const container = document.getElementById('productsList');
+            if (products.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1;">Zatím nejsou nahrány produkty</p>';
+                return;
+            }
             container.innerHTML = products.map((p, i) => `
                 <div class="product-card">
-                    <strong>${p.name}</strong><br>
-                    Kód: ${p.code}<br>
-                    Balení: ${p.packaging}<br>
-                    <input type="number" id="qty-${i}" placeholder="Množství" min="0" step="0.5">
-                    <button onclick="addOrder(${i})">Přidat</button>
+                    <strong>${p.name}</strong>
+                    <small><strong>Kód:</strong> ${p.code}</small>
+                    <small><strong>Značka:</strong> ${p.brand}</small>
+                    <small><strong>Balení:</strong> ${p.packaging}</small>
+                    <input type="number" id="qty-${i}" placeholder="Množství" min="0" step="0.5" style="margin-top: 10px;">
+                    <button onclick="addOrder(${i})" style="width: 100%;">Přidat</button>
                 </div>
             `).join('');
         }
 
         function addOrder(index) {
-            const userName = document.getElementById('userName').value || 'Anonymní';
-            const qty = document.getElementById(`qty-${index}`).value;
+            const userName = document.getElementById('userName').value. trim();
+            if (!userName) return alert('Zadej své jméno!');
             
+            const qty = parseFloat(document.getElementById(`qty-${index}`).value);
             if (! qty || qty <= 0) return alert('Zadej množství!');
             
             const order = {
                 user: userName,
                 product: products[index]. code,
                 name: products[index].name,
-                qty: parseFloat(qty),
-                unit: products[index].unit
+                qty: qty,
+                unit: products[index].unit,
+                timestamp: new Date().toISOString()
             };
             
-            orders. push(order);
+            orders.push(order);
             db.ref('orders').push(order);
             document.getElementById(`qty-${index}`).value = '';
             displayOrders();
@@ -141,13 +150,26 @@
         function displayOrders() {
             const container = document.getElementById('ordersList');
             if (! orders.length) {
-                container.innerHTML = '<p>Zatím žádné objednávky</p>';
+                container.innerHTML = '<p style="color: #999;">Zatím žádné objednávky</p>';
                 return;
             }
             
-            container.innerHTML = '<table><tr><th>Uživatel</th><th>Produkt</th><th>Množství</th></tr>' +
-                orders.map(o => `<tr><td>${o.user}</td><td>${o.name}</td><td>${o.qty} ${o.unit}</td></tr>`).join('') +
-                '</table>';
+            const grouped = {};
+            orders.forEach(o => {
+                if (!grouped[o.user]) grouped[o.user] = [];
+                grouped[o.user].push(o);
+            });
+            
+            let html = '';
+            for (const user in grouped) {
+                html += `<h3>👤 ${user}</h3>`;
+                html += '<table><tr><th>Kód</th><th>Produkt</th><th>Množství</th><th>Jednotka</th></tr>';
+                grouped[user].forEach(o => {
+                    html += `<tr><td>${o.product}</td><td>${o.name}</td><td>${o.qty}</td><td>${o.unit}</td></tr>`;
+                });
+                html += '</table>';
+            }
+            container.innerHTML = html;
         }
 
         function generateExport() {
@@ -160,12 +182,14 @@
                 summary[key].qty += o.qty;
             });
             
-            const table = Object.values(summary).map(s => 
-                `<tr><td>${s.code}</td><td>${s.name}</td><td>${s.unit}</td><td>${s.qty}</td></tr>`
-            ).join('');
+            let html = '<h3>Souhrn objednávky pro dodavatele:</h3>';
+            html += '<table><tr><th>Kód produktu</th><th>Název produktu</th><th>Jednotka</th><th>Celkové množství</th></tr>';
+            Object.values(summary).forEach(s => {
+                html += `<tr><td>${s.code}</td><td>${s.name}</td><td>${s.unit}</td><td><strong>${s.qty}</strong></td></tr>`;
+            });
+            html += '</table>';
             
-            document.getElementById('exportTable').innerHTML = 
-                '<table><tr><th>Kód</th><th>Produkt</th><th>Jednotka</th><th>Množství</th></tr>' + table + '</table>';
+            document.getElementById('exportTable').innerHTML = html;
         }
 
         function downloadCSV() {
@@ -178,20 +202,22 @@
                 summary[key].qty += o.qty;
             });
             
-            let csv = 'Kód,Produkt,Jednotka,Množství\n';
+            let csv = 'Kód produktu,Název produktu,Jednotka,Množství\n';
             Object.values(summary).forEach(s => {
-                csv += `${s.code},${s.name},${s.unit},${s.qty}\n`;
+                csv += `"${s.code}","${s.name}","${s.unit}","${s.qty}"\n`;
             });
             
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document. createElement('a');
-            a. href = url;
-            a. download = `pizza-objednavka-${new Date().toISOString().split('T')[0]}.csv`;
-            a.click();
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `pizza-objednavka-${new Date().toISOString().split('T')[0]}.csv`;
+            link.click();
         }
 
-        // Load orders from Firebase
+        function printExport() {
+            window.print();
+        }
+
         db.ref('orders').on('value', snapshot => {
             orders = [];
             snapshot.forEach(child => {
