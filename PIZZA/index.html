@@ -1,16 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
+<! DOCTYPE html>
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pizza Ingredients Ordering</title>
+    <title>🍕 Pizza Objednávky</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; color: #d32f2f; margin-bottom: 30px; }
+        .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        input[type="file"], input[type="text"], input[type="number"] { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #d32f2f; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-right: 5px; }
+        button:hover { background: #b71c1c; }
+        .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f5f5f5; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <h1>Order Your Pizza Ingredients</h1>
-    <input type="file" id="csvFile" accept=".csv" />
-    <button id="uploadBtn">Upload Ingredients</button>
-    <div id="orders"></div>
-    <script src="app.js"></script>
+    <div class="container">
+        <h1>🍕 Pizza Objednávky - Správa Surovin</h1>
+
+        <!-- Sekcí pro uživatele -->
+        <div class="section">
+            <h2>Zadej své jméno:</h2>
+            <input type="text" id="userName" placeholder="Tvoje jméno">
+        </div>
+
+        <!-- Sekce pro nahrávání CSV -->
+        <div class="section">
+            <h2>Nahraj seznam surovin (CSV)</h2>
+            <input type="file" id="csvFile" accept=".csv">
+            <button onclick="loadCSV()">Nahrát CSV</button>
+        </div>
+
+        <!-- Sekce s produkty -->
+        <div class="section">
+            <h2>Dostupné produkty:</h2>
+            <div id="productsList" class="products"></div>
+        </div>
+
+        <!-- Sekce s objednávkami -->
+        <div class="section">
+            <h2>Objednávky:</h2>
+            <div id="ordersList"></div>
+        </div>
+
+        <!-- Sekce pro export -->
+        <div class="section">
+            <h2>Export pro dodavatele:</h2>
+            <button onclick="generateExport()">Vytvořit export</button>
+            <button onclick="downloadCSV()">Stáhnout CSV</button>
+            <div id="exportTable"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database. js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCCE7yaKkdfXnUlobVarZhYbb7K53dUUuQ",
+            authDomain: "pizza-cc0b8.firebaseapp.com",
+            projectId: "pizza-cc0b8",
+            storageBucket: "pizza-cc0b8.firebasestorage.app",
+            messagingSenderId: "684595838522",
+            appId: "1:684595838522:web:8c64b1481b2825c74d7f03"
+        };
+
+        firebase. initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        let products = [];
+        let orders = [];
+
+        function loadCSV() {
+            const file = document.getElementById('csvFile'). files[0];
+            if (! file) return alert('Vyber soubor! ');
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const csv = e.target.result;
+                const lines = csv.split('\n');
+                products = [];
+                
+                lines. forEach(line => {
+                    if (line.trim()) {
+                        const parts = line.split(',');
+                        products.push({
+                            code: parts[0],
+                            name: parts[1],
+                            brand: parts[2],
+                            packaging: parts[3],
+                            unit: parts[4] || 'ks'
+                        });
+                    }
+                });
+                
+                displayProducts();
+                alert(`Nahráno ${products.length} produktů! `);
+            };
+            reader.readAsText(file);
+        }
+
+        function displayProducts() {
+            const container = document.getElementById('productsList');
+            container.innerHTML = products.map((p, i) => `
+                <div class="product-card">
+                    <strong>${p.name}</strong><br>
+                    Kód: ${p.code}<br>
+                    Balení: ${p.packaging}<br>
+                    <input type="number" id="qty-${i}" placeholder="Množství" min="0" step="0.5">
+                    <button onclick="addOrder(${i})">Přidat</button>
+                </div>
+            `).join('');
+        }
+
+        function addOrder(index) {
+            const userName = document.getElementById('userName').value || 'Anonymní';
+            const qty = document.getElementById(`qty-${index}`).value;
+            
+            if (! qty || qty <= 0) return alert('Zadej množství!');
+            
+            const order = {
+                user: userName,
+                product: products[index]. code,
+                name: products[index].name,
+                qty: parseFloat(qty),
+                unit: products[index].unit
+            };
+            
+            orders. push(order);
+            db.ref('orders').push(order);
+            document.getElementById(`qty-${index}`).value = '';
+            displayOrders();
+        }
+
+        function displayOrders() {
+            const container = document.getElementById('ordersList');
+            if (! orders.length) {
+                container.innerHTML = '<p>Zatím žádné objednávky</p>';
+                return;
+            }
+            
+            container.innerHTML = '<table><tr><th>Uživatel</th><th>Produkt</th><th>Množství</th></tr>' +
+                orders.map(o => `<tr><td>${o.user}</td><td>${o.name}</td><td>${o.qty} ${o.unit}</td></tr>`).join('') +
+                '</table>';
+        }
+
+        function generateExport() {
+            const summary = {};
+            orders.forEach(o => {
+                const key = o.product;
+                if (!summary[key]) {
+                    summary[key] = { code: o.product, name: o.name, qty: 0, unit: o.unit };
+                }
+                summary[key].qty += o.qty;
+            });
+            
+            const table = Object.values(summary).map(s => 
+                `<tr><td>${s.code}</td><td>${s.name}</td><td>${s.unit}</td><td>${s.qty}</td></tr>`
+            ).join('');
+            
+            document.getElementById('exportTable').innerHTML = 
+                '<table><tr><th>Kód</th><th>Produkt</th><th>Jednotka</th><th>Množství</th></tr>' + table + '</table>';
+        }
+
+        function downloadCSV() {
+            const summary = {};
+            orders.forEach(o => {
+                const key = o.product;
+                if (! summary[key]) {
+                    summary[key] = { code: o.product, name: o. name, qty: 0, unit: o.unit };
+                }
+                summary[key].qty += o.qty;
+            });
+            
+            let csv = 'Kód,Produkt,Jednotka,Množství\n';
+            Object.values(summary).forEach(s => {
+                csv += `${s.code},${s.name},${s.unit},${s.qty}\n`;
+            });
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document. createElement('a');
+            a. href = url;
+            a. download = `pizza-objednavka-${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+        }
+
+        // Load orders from Firebase
+        db.ref('orders').on('value', snapshot => {
+            orders = [];
+            snapshot.forEach(child => {
+                orders.push(child.val());
+            });
+            displayOrders();
+        });
+    </script>
 </body>
 </html>
